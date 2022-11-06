@@ -7,19 +7,30 @@ import { BiMenuAltRight } from "react-icons/bi";
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const viewPort = useViewport().windowSize;
+  const [navbar, setNavbar] = useState(false);
 
   if (openMenu === true && viewPort.innerWidth > 1280) {
     setOpenMenu(false);
   }
 
+  const changeBackground = () => {
+    if (window.scrollY >= 80) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeBackground);
+
   const className = {
     container: `w-screen h-fit py-5 px-20 font-Sora fixed top-0 inset-x-0 ${
-      openMenu ? "bg-white shadow-xl" : "bg-transparent shadow-none"
+      openMenu || navbar ? "bg-white shadow-xl" : "bg-transparent shadow-none"
     } transition-colors duration-200`,
     desktopNav:
       "w-full h-fit hidden xl:grid grid-cols-3 place-items-center gap-20",
-    mobileNav: `w-full block xl:hidden ${openMenu ? "h-fit" : "h-20"}`,
-    navigation: "w-full h-fit flex justify-between items-center px-10 py-2",
+    mobileNav: `w-full block xl:hidden ${openMenu ? "h-fit" : "h-32"}`,
+    navigation: "w-full h-full flex justify-between items-center px-10 py-2",
     logoBox: "w-fit h-full flex items-center justify-start",
     logo: "w-fit h-[30px]",
     navBox:
