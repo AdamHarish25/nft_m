@@ -29,7 +29,7 @@ const Navbar = () => {
     } transition-colors duration-200`,
     desktopNav:
       "w-full h-fit hidden xl:grid grid-cols-3 place-items-center gap-20",
-    mobileNav: `w-full block xl:hidden ${openMenu ? "h-fit" : "h-32"}`,
+    mobileNav: `w-full block xl:hidden ${openMenu ? "h-fit" : "h-28"}`,
     navigation: "w-full h-full flex justify-between items-center px-10 py-2",
     logoBox: "w-fit h-full flex items-center justify-start",
     logo: "w-fit h-[30px]",
@@ -53,7 +53,9 @@ const Navbar = () => {
     <nav className={className.container}>
       <desktopNav className={className.desktopNav}>
         <section className={className.logoBox}>
-          <img src={logo} alt="logo" className={className.logo} />
+          <a href="#">
+            <img src={logo} alt="logo" className={className.logo} />
+          </a>
         </section>
         <ul className={className.navBox}>
           <li>
@@ -78,7 +80,9 @@ const Navbar = () => {
       <mobileNav className={className.mobileNav}>
         <navigation className={className.navigation}>
           <section className={className.logoBox}>
-            <img src={logo} alt="logo" className={className.logo} />
+            <a href="#">
+              <img src={logo} alt="logo" className={className.logo} />
+            </a>
           </section>
           <button
             className={className.buttonMenu}
