@@ -2,11 +2,12 @@ import { RiTimerFill } from "react-icons/ri";
 import { AiFillHeart } from "react-icons/ai";
 import Carousel from "./Components/Carousel/Carousel";
 import { Carousel1 } from "./Data/CarouselData";
+import CountdownTimer from "./Components/Timer/Timer";
 
 const LiveAuctions = () => {
   const className = {
     container:
-      "w-screen h-auto py-10 flex flex-col justify-center items-center font-Sora",
+      "w-screen h-auto py-20 flex flex-col justify-center items-center font-Sora",
     title: "text-3xl mb-10",
     cardContainer: "flex justify-center xl:justify-start",
     card: "w-96 p-10 h-fit",
@@ -17,7 +18,7 @@ const LiveAuctions = () => {
     cardTitle: "font-semibold w-[250px] text-sm xl:text-base",
     price:
       "bg-[#2A27C9]/20 text-[#2A27C9] w-fit h-fit p-2 rounded-lg text-center font-semibold text-sm xl:text-base",
-    countDown: "flex items-center gap-5 font-semibold",
+    countDown: "flex items-center gap-5 font-semibold text-sm lg:text-base",
     cardFooter:
       "my-5 w-full h-fit border-t border-t-gray-400 py-5 flex justify-evenly items-center",
     people: "flex justify-start items-center",
@@ -32,7 +33,10 @@ const LiveAuctions = () => {
       <h1 className={className.title}>Latest live auctions</h1>
       <Carousel show={3}>
         {Carousel1.map(
-          ({ src, alt, title, price, profilePics, bidders, lovers }, index) => {
+          (
+            { src, alt, title, price, people, bidders, likers, timer },
+            index
+          ) => {
             return (
               <div key={index} className={className.cardContainer}>
                 <card>
@@ -45,14 +49,16 @@ const LiveAuctions = () => {
                       <price className={className.price}>{price}</price>
                     </headerbox>
                     <h1 className={className.countDown}>
-                      <RiTimerFill className="w-6 h-6" /> 57:15 min left
+                      <RiTimerFill className="w-6 h-6" />{" "}
+                      <CountdownTimer targetDate={timer} /> min left
                     </h1>
                   </cardbody>
                   <cardfooter className={className.cardFooter}>
                     <people className={className.people}>
-                      {profilePics.map(({ src, alt }, index) => {
+                      {people.map(({ src, alt }, index) => {
                         return (
                           <img
+                            key={index}
                             src={src}
                             alt={alt}
                             className={className.person}
@@ -64,7 +70,7 @@ const LiveAuctions = () => {
                       <h1>{bidders} people are bidding</h1>
                       <div className={className.like}>
                         <AiFillHeart className="text-red-600" />
-                        {lovers}
+                        {likers}
                       </div>
                     </sections>
                   </cardfooter>
