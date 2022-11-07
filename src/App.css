@@ -699,6 +699,10 @@ video {
   height: 1.5rem !important;
 }
 
+.h-96{
+  height: 24rem !important;
+}
+
 .h-28{
   height: 7rem !important;
 }
@@ -709,18 +713,6 @@ video {
 
 .h-0{
   height: 0px !important;
-}
-
-.h-60{
-  height: 15rem !important;
-}
-
-.h-80{
-  height: 20rem !important;
-}
-
-.h-96{
-  height: 24rem !important;
 }
 
 .w-screen{
@@ -989,9 +981,9 @@ video {
   padding: 1.75rem !important;
 }
 
-.py-10{
-  padding-top: 2.5rem !important;
-  padding-bottom: 2.5rem !important;
+.py-20{
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
 }
 
 .py-5{
@@ -1022,11 +1014,6 @@ video {
 .py-2{
   padding-top: 0.5rem !important;
   padding-bottom: 0.5rem !important;
-}
-
-.py-20{
-  padding-top: 5rem !important;
-  padding-bottom: 5rem !important;
 }
 
 .pt-40{
@@ -1274,10 +1261,6 @@ video {
 
   .xl\:h-7{
     height: 1.75rem !important;
-  }
-
-  .xl\:h-screen{
-    height: 100vh !important;
   }
 
   .xl\:w-7{
