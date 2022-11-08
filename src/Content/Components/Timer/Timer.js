@@ -4,9 +4,9 @@ import { useCountdown } from "./countdown";
 const ShowCounter = ({ days, hours, minutes, seconds }) => {
   return (
     <div className="flex items-center gap-2">
-      {hours}
+      {hours < 10 ? "0" + hours : hours}
       <p>:</p>
-      {minutes}
+      {minutes < 10 ? "0" + minutes : minutes}
     </div>
   );
 };

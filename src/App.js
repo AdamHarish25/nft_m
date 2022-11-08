@@ -5,6 +5,7 @@ import LiveAuctions from "./Content/LiveAuctions";
 import Overline from "./Content/Overline";
 
 function App() {
+  console.log(23 * 60 * 60 * 1000 + new Date().getTime());
   return (
     <div className="App">
       <Home />
