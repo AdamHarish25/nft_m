@@ -22,6 +22,8 @@ const subtSevenH = 7 * 60 * 60 * 1000;
 
 const targetmills = +targetdate - subtSevenH;
 
+const currenttime = date.getTime();
+
 export const Carousel1 = [
   {
     src: first,
@@ -36,7 +38,7 @@ export const Carousel1 = [
     ],
     bidders: 54,
     likers: 93,
-    timer: targetmills + date.getTime(),
+    timer: targetmills + currenttime,
   },
   {
     src: second,
@@ -51,7 +53,7 @@ export const Carousel1 = [
     ],
     bidders: 32,
     likers: 450,
-    timer: targetmills + date.getTime(),
+    timer: targetmills + currenttime,
   },
   {
     src: third,
@@ -66,7 +68,7 @@ export const Carousel1 = [
     ],
     bidders: 65,
     likers: 349,
-    timer: targetmills + date.getTime(),
+    timer: targetmills + currenttime,
   },
   {
     src: fourth,
@@ -81,7 +83,7 @@ export const Carousel1 = [
     ],
     bidders: 23,
     likers: 49,
-    timer: targetmills + date.getTime(),
+    timer: targetmills + currenttime,
   },
   {
     src: fifth,
@@ -96,7 +98,7 @@ export const Carousel1 = [
     ],
     bidders: 98,
     likers: 10,
-    timer: targetmills + date.getTime(),
+    timer: targetmills + currenttime,
   },
 ];
 
@@ -107,7 +109,7 @@ export const Carousel2 = [
     title: "Fames habitasse risus ultricies tortor sit",
     price: "2.55 ETH",
     bidders: 101,
-    timer: targetmills + date.getTime(),
+    timer: targetmills + currenttime,
   },
   {
     src: second2,
@@ -115,6 +117,6 @@ export const Carousel2 = [
     title: "Senectus adipiscing nascetur accumsan etiam",
     price: "1.63 ETH",
     bidders: 98,
-    timer: targetmills + date.getTime(),
+    timer: targetmills + currenttime,
   },
 ];
