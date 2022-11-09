@@ -3,6 +3,8 @@ import second from "../../Attachments/Image/Item1.png";
 import third from "../../Attachments/Image/Item2.png";
 import fourth from "../../Attachments/Image/Item3.png";
 import fifth from "../../Attachments/Image/Item4.png";
+import first2 from "../../Attachments/Image/item-2-1.png";
+import second2 from "../../Attachments/Image/item-2-2.png";
 import ran1 from "../../Attachments/Image/random/random1.jpg";
 import ran2 from "../../Attachments/Image/random/random2.jpg";
 import ran3 from "../../Attachments/Image/random/random3.jpg";
@@ -11,6 +13,14 @@ import ran6 from "../../Attachments/Image/random/random6.jpg";
 import ran7 from "../../Attachments/Image/random/random7.jpg";
 import ran8 from "../../Attachments/Image/random/random8.jpg";
 import ran9 from "../../Attachments/Image/random/random9.jpg";
+
+const date = new Date();
+
+const targetdate = date.setUTCHours(0, 0, 0, 0);
+
+const subtSevenH = 7 * 60 * 60 * 1000;
+
+const targetmills = +targetdate - subtSevenH;
 
 export const Carousel1 = [
   {
@@ -26,7 +36,7 @@ export const Carousel1 = [
     ],
     bidders: 54,
     likers: 93,
-    timer: 24 * 60 * 60 * 1000 + new Date().getTime(),
+    timer: targetmills + date.getTime(),
   },
   {
     src: second,
@@ -41,7 +51,7 @@ export const Carousel1 = [
     ],
     bidders: 32,
     likers: 450,
-    timer: 22 * 60 * 60 * 1000 + new Date().getTime(),
+    timer: targetmills + date.getTime(),
   },
   {
     src: third,
@@ -56,7 +66,7 @@ export const Carousel1 = [
     ],
     bidders: 65,
     likers: 349,
-    timer: 19 * 60 * 60 * 1000 + new Date().getTime(),
+    timer: targetmills + date.getTime(),
   },
   {
     src: fourth,
@@ -71,7 +81,7 @@ export const Carousel1 = [
     ],
     bidders: 23,
     likers: 49,
-    timer: 18 * 60 * 60 * 1000 + new Date().getTime(),
+    timer: targetmills + date.getTime(),
   },
   {
     src: fifth,
@@ -86,6 +96,25 @@ export const Carousel1 = [
     ],
     bidders: 98,
     likers: 10,
-    timer: 21 * 60 * 60 * 1000 + new Date().getTime(),
+    timer: targetmills + date.getTime(),
+  },
+];
+
+export const Carousel2 = [
+  {
+    src: first2,
+    alt: "nft-2#1",
+    title: "Fames habitasse risus ultricies tortor sit",
+    price: "2.55 ETH",
+    bidders: 101,
+    timer: targetmills + date.getTime(),
+  },
+  {
+    src: second2,
+    alt: "nft-2#2",
+    title: "Senectus adipiscing nascetur accumsan etiam",
+    price: "1.63 ETH",
+    bidders: 98,
+    timer: targetmills + date.getTime(),
   },
 ];

@@ -25,7 +25,7 @@ const LiveAuctions = () => {
     person: "w-6 h-6 xl:w-7 xl:h-7 object-cover rounded-full",
     sections:
       "w-full flex justify-between items-center text-gray-500 text-xs xl:text-sm gap-5 pl-10",
-    like: "flex items-center gap-5",
+    like: "flex items-center gap-5 text-red-600",
   };
 
   return (
@@ -69,7 +69,7 @@ const LiveAuctions = () => {
                     <sections className={className.sections}>
                       <h1>{bidders} people are bidding</h1>
                       <div className={className.like}>
-                        <AiFillHeart className="text-red-600" />
+                        <AiFillHeart />
                         {likers}
                       </div>
                     </sections>
