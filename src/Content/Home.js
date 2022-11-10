@@ -1,5 +1,5 @@
-import frame from "../Attachments/Image/Frame.png";
-import frame2 from "../Attachments/Image/Frame2.png";
+import frame from "../Attachments/Image/Home/Frame.png";
+import frame2 from "../Attachments/Image/Home/Frame2.png";
 import { FaChevronDown, FaSearch } from "react-icons/fa";
 import brandsData from "./Data/BrandsData";
 import { useState } from "react";
@@ -52,6 +52,7 @@ const Home = () => {
     } transition-opacity duration-200`,
     menu: "cursor-pointer text-gray-400 font-medium hover:bg-gray-400 hover:text-white p-2 rounded-md transition-color duration-200",
   };
+
   return (
     <header className={className.container}>
       <wrapper className={className.wrapper}>

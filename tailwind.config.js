@@ -14,7 +14,7 @@ module.exports = {
 
       sm: "640px",
 
-      md: "768px",
+      md: "848px",
 
       lg: "1024px",
 
@@ -30,7 +30,8 @@ module.exports = {
         SL: "auto 1fr",
       },
       backgroundImage: {
-        homeBackground: "url('./Attachments/Image/Squares.png')",
+        homeBackground: "url('./Attachments/Image/Home/Squares.png')",
+        box2: "url('./Attachments/Image/bgBox2.png')",
       },
     },
   },

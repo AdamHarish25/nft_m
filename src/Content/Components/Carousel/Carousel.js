@@ -67,6 +67,9 @@ const Carousel = (props) => {
     } else {
       carouselCountDisplay = `show-${show}`;
     }
+  } else if (show === 1.5) {
+    show = 1.5;
+    carouselCountDisplay = `show-1-5`;
   } else {
     if (viewport.innerWidth <= 1000 && viewport.innerWidth > 0) {
       show = 1;

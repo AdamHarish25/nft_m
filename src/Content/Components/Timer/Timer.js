@@ -1,7 +1,7 @@
 import React from "react";
 import { useCountdown } from "./countdown";
 
-const ShowCounter = ({ days, hours, minutes, seconds }) => {
+const ShowCounter = ({ hours, minutes }) => {
   return (
     <div className="flex items-center gap-2">
       {hours < 10 ? "0" + hours : hours}

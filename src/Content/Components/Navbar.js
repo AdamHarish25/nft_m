@@ -94,16 +94,24 @@ const Navbar = () => {
         <menuBox className={className.menuBox}>
           <ul className={className.navBox}>
             <li>
-              <a href="#">Auction</a>
+              <a onClick={() => setOpenMenu(!openMenu)} href="#">
+                Auction
+              </a>
             </li>
             <li>
-              <a href="#Roadmap">Roadmap</a>
+              <a onClick={() => setOpenMenu(!openMenu)} href="#Roadmap">
+                Roadmap
+              </a>
             </li>
             <li>
-              <a href="#Discover">Discover</a>
+              <a onClick={() => setOpenMenu(!openMenu)} href="#Discover">
+                Discover
+              </a>
             </li>
             <li>
-              <a href="#Community">Community</a>
+              <a onClick={() => setOpenMenu(!openMenu)} href="#Community">
+                Community
+              </a>
             </li>
           </ul>
           <section className={className.box}>

@@ -1,7 +1,6 @@
 .carousel-container {
     width: 100%;
     display: flex;
-    padding: 10px 10px;
     flex-direction: column;
     position: relative;
 }
@@ -10,7 +9,6 @@
     display: flex;
     width: 100%;
     position: relative;
-    padding-left: 40px;
 }
 
 .carousel-content-wrapper {
@@ -38,8 +36,14 @@
     flex-grow: 1;
 }
 
+.carousel-content.show-1-5 > * {
+    width: calc(100% / 2);
+}
+
 .carousel-content.show-1 > * {
     width: 100%;
+    flex-shrink: 0;
+    flex-grow: 1;
 }
 
 .carousel-content.show-2 > * {
@@ -70,7 +74,7 @@
     transform: translateY(-50%);
     position: absolute;
     border-radius: 100%;
-    background-color: #ffffffcc;
+    background-color: #ffffffe6;
     opacity: 0;
     cursor: default;
 }

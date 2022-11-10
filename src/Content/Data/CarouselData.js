@@ -1,10 +1,10 @@
-import first from "../../Attachments/Image/Item.png";
-import second from "../../Attachments/Image/Item1.png";
-import third from "../../Attachments/Image/Item2.png";
-import fourth from "../../Attachments/Image/Item3.png";
-import fifth from "../../Attachments/Image/Item4.png";
-import first2 from "../../Attachments/Image/item-2-1.png";
-import second2 from "../../Attachments/Image/item-2-2.png";
+import first from "../../Attachments/Image/Carousel1/Item.png";
+import second from "../../Attachments/Image/Carousel1/Item1.png";
+import third from "../../Attachments/Image/Carousel1/Item2.png";
+import fourth from "../../Attachments/Image/Carousel1/Item3.png";
+import fifth from "../../Attachments/Image/Carousel1/Item4.png";
+import first2 from "../../Attachments/Image/Carousel2/item-2-1.png";
+import second2 from "../../Attachments/Image/Carousel2/item-2-2.png";
 import ran1 from "../../Attachments/Image/random/random1.jpg";
 import ran2 from "../../Attachments/Image/random/random2.jpg";
 import ran3 from "../../Attachments/Image/random/random3.jpg";
@@ -23,6 +23,8 @@ const subtSevenH = 7 * 60 * 60 * 1000;
 const targetmills = +targetdate - subtSevenH;
 
 const currenttime = date.getTime();
+
+console.log(currenttime);
 
 export const Carousel1 = [
   {
