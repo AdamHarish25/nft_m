@@ -24,11 +24,11 @@ const Navbar = () => {
   window.addEventListener("scroll", changeBackground);
 
   const className = {
-    container: `w-screen h-fit py-2 xl:py-5 px-20 font-Sora fixed top-0 inset-x-0 ${
+    container: `w-screen h-fit py-3 xl:py-5 px-10 font-Sora fixed top-0 inset-x-0 ${
       openMenu || navbar ? "bg-white shadow-xl" : "bg-transparent shadow-none"
     } transition-colors duration-200`,
     desktopNav:
-      "w-full h-fit hidden lg:grid grid-cols-3 place-items-center gap-20",
+      "w-full h-fit hidden lg:grid grid-cols-3 place-items-center gap-24 xl:gap-20",
     mobileNav: `w-full block lg:hidden ${openMenu ? "h-fit" : "h-24"}`,
     navigation: "w-full h-full flex justify-between items-center px-10 py-2",
     logoBox: "w-fit h-full flex items-center justify-start",

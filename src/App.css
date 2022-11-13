@@ -585,9 +585,9 @@ video {
   }
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1025px){
   .container{
-    max-width: 1024px;
+    max-width: 1025px;
   }
 }
 
@@ -647,6 +647,11 @@ video {
 .my-5{
   margin-top: 1.25rem !important;
   margin-bottom: 1.25rem !important;
+}
+
+.my-10{
+  margin-top: 2.5rem !important;
+  margin-bottom: 2.5rem !important;
 }
 
 .mb-40{
@@ -715,8 +720,8 @@ video {
   height: 24rem !important;
 }
 
-.h-28{
-  height: 7rem !important;
+.h-24{
+  height: 6rem !important;
 }
 
 .h-\[30px\]{
@@ -727,8 +732,8 @@ video {
   height: 0px !important;
 }
 
-.h-24{
-  height: 6rem !important;
+.h-10{
+  height: 2.5rem !important;
 }
 
 .w-screen{
@@ -785,16 +790,16 @@ video {
   width: 80px !important;
 }
 
+.w-60{
+  width: 15rem !important;
+}
+
 .w-5{
   width: 1.25rem !important;
 }
 
 .w-4{
   width: 1rem !important;
-}
-
-.w-60{
-  width: 15rem !important;
 }
 
 .transform{
@@ -888,6 +893,22 @@ video {
 
 .gap-2{
   gap: 0.5rem !important;
+}
+
+.gap-24{
+  gap: 6rem !important;
+}
+
+.gap-4{
+  gap: 1rem !important;
+}
+
+.gap-1{
+  gap: 0.25rem !important;
+}
+
+.gap-6{
+  gap: 1.5rem !important;
 }
 
 .space-y-4 > :not([hidden]) ~ :not([hidden]){
@@ -993,6 +1014,11 @@ video {
   background-color: transparent !important;
 }
 
+.bg-purple-400{
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(192 132 252 / var(--tw-bg-opacity)) !important;
+}
+
 .bg-homeBackground{
   background-image: url('./Attachments/Image/Home/Squares.png') !important;
 }
@@ -1029,6 +1055,10 @@ video {
 
 .bg-no-repeat{
   background-repeat: no-repeat !important;
+}
+
+.object-contain{
+  object-fit: contain !important;
 }
 
 .object-cover{
@@ -1111,9 +1141,9 @@ video {
   padding-bottom: 1rem !important;
 }
 
-.px-20{
-  padding-left: 5rem !important;
-  padding-right: 5rem !important;
+.py-3{
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
 }
 
 .py-2{
@@ -1121,25 +1151,12 @@ video {
   padding-bottom: 0.5rem !important;
 }
 
-.px-3{
-  padding-left: 0.75rem !important;
-  padding-right: 0.75rem !important;
-}
-
-.pt-\[300px\]{
-  padding-top: 300px !important;
+.pt-\[190px\]{
+  padding-top: 190px !important;
 }
 
 .pl-10{
   padding-left: 2.5rem !important;
-}
-
-.pt-\[200px\]{
-  padding-top: 200px !important;
-}
-
-.pt-\[190px\]{
-  padding-top: 190px !important;
 }
 
 .text-center{
@@ -1188,13 +1205,13 @@ video {
   line-height: 1rem !important;
 }
 
+.text-\[8px\]{
+  font-size: 8px !important;
+}
+
 .text-2xl{
   font-size: 1.5rem !important;
   line-height: 2rem !important;
-}
-
-.text-\[8px\]{
-  font-size: 8px !important;
 }
 
 .font-medium{
@@ -1211,6 +1228,10 @@ video {
 
 .font-extralight{
   font-weight: 200 !important;
+}
+
+.font-normal{
+  font-weight: 400 !important;
 }
 
 .tracking-widest{
@@ -1260,6 +1281,11 @@ video {
 .text-red-500{
   --tw-text-opacity: 1 !important;
   color: rgb(239 68 68 / var(--tw-text-opacity)) !important;
+}
+
+.text-\[\#4745D0\]{
+  --tw-text-opacity: 1 !important;
+  color: rgb(71 69 208 / var(--tw-text-opacity)) !important;
 }
 
 .placeholder-gray-400::-webkit-input-placeholder{
@@ -1345,13 +1371,9 @@ video {
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
-
-  .md\:bg-contain{
-    background-size: contain !important;
-  }
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1025px){
   .lg\:order-1{
     order: 1 !important;
   }
@@ -1392,6 +1414,12 @@ video {
     width: 100% !important;
   }
 
+  .lg\:w-fit{
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+  }
+
   .lg\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   }
@@ -1408,6 +1436,10 @@ video {
     place-items: stretch !important;
   }
 
+  .lg\:items-start{
+    align-items: flex-start !important;
+  }
+
   .lg\:items-center{
     align-items: center !important;
   }
@@ -1420,36 +1452,8 @@ video {
     justify-content: flex-end !important;
   }
 
-  .lg\:p-10{
-    padding: 2.5rem !important;
-  }
-
-  .lg\:p-0{
-    padding: 0px !important;
-  }
-
-  .lg\:p-1{
-    padding: 0.25rem !important;
-  }
-
-  .lg\:p-2{
-    padding: 0.5rem !important;
-  }
-
-  .lg\:pt-\[300px\]{
-    padding-top: 300px !important;
-  }
-
-  .lg\:pr-2{
-    padding-right: 0.5rem !important;
-  }
-
-  .lg\:pt-\[200px\]{
-    padding-top: 200px !important;
-  }
-
-  .lg\:pt-\[230px\]{
-    padding-top: 230px !important;
+  .lg\:gap-5{
+    gap: 1.25rem !important;
   }
 
   .lg\:pt-\[240px\]{
@@ -1460,6 +1464,10 @@ video {
     text-align: left !important;
   }
 
+  .lg\:text-start{
+    text-align: start !important;
+  }
+
   .lg\:text-\[65px\]{
     font-size: 65px !important;
   }
@@ -1467,6 +1475,16 @@ video {
   .lg\:text-base{
     font-size: 1rem !important;
     line-height: 1.5rem !important;
+  }
+
+  .lg\:text-3xl{
+    font-size: 1.875rem !important;
+    line-height: 2.25rem !important;
+  }
+
+  .lg\:text-xl{
+    font-size: 1.25rem !important;
+    line-height: 1.75rem !important;
   }
 }
 
@@ -1483,10 +1501,6 @@ video {
     width: auto !important;
   }
 
-  .xl\:w-60{
-    width: 15rem !important;
-  }
-
   .xl\:w-36{
     width: 9rem !important;
   }
@@ -1495,8 +1509,8 @@ video {
     justify-content: flex-start !important;
   }
 
-  .xl\:p-5{
-    padding: 1.25rem !important;
+  .xl\:gap-20{
+    gap: 5rem !important;
   }
 
   .xl\:px-10{
@@ -1507,14 +1521,6 @@ video {
   .xl\:py-5{
     padding-top: 1.25rem !important;
     padding-bottom: 1.25rem !important;
-  }
-
-  .xl\:pt-40{
-    padding-top: 10rem !important;
-  }
-
-  .xl\:pt-\[300px\]{
-    padding-top: 300px !important;
   }
 
   .xl\:text-7xl{
@@ -1540,5 +1546,10 @@ video {
   .xl\:text-xs{
     font-size: 0.75rem !important;
     line-height: 1rem !important;
+  }
+
+  .xl\:text-5xl{
+    font-size: 3rem !important;
+    line-height: 1 !important;
   }
 }
