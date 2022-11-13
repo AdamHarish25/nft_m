@@ -1019,6 +1019,10 @@ video {
   background-size: cover !important;
 }
 
+.bg-contain{
+  background-size: contain !important;
+}
+
 .bg-bottom{
   background-position: bottom !important;
 }

@@ -19,7 +19,7 @@ const Offers = () => {
         "w-full p-3 h-fit rounded-xl font-semibold text-gray-400 border-2 border-gray-400",
     },
     box2: {
-      box2: "w-full md:w-auto h-full md:h-auto py-10 font-Sora flex flex-col items-center justify-end bg-box2 bg-cover md:bg-contain bg-no-repeat bg-bottom",
+      box2: "w-full md:w-auto h-full md:h-auto py-10 font-Sora flex flex-col items-center justify-end bg-box2 bg-contain bg-no-repeat bg-bottom",
       handImg: "w-full h-fit",
       bottomComponents: "w-full px-10 h-fit space-y-10 text-white",
       descriptionBox: "space-y-2 w-fit",
