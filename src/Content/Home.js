@@ -31,7 +31,7 @@ const Home = () => {
   const className = {
     container: "w-screen h-auto lg:h-screen bg-homeBackground bg-cover p-10 mb-40",
     wrapper:
-      "h-full w-auto flex flex-col justify-center items-center gap-20 pt-[190px] xl:pt-40",
+      "h-full w-auto flex flex-col justify-center items-center gap-20 pt-[190px] lg:pt-[240px]",
     searchNtitleBox:
       "h-fit flex flex-col items-center text-center gap-7 font-Sora",
     smlTitle: "font-medium text-gray-400 text-sm tracking-widest",

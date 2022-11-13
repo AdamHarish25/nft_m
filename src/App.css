@@ -1444,6 +1444,18 @@ video {
     padding-right: 0.5rem !important;
   }
 
+  .lg\:pt-\[200px\]{
+    padding-top: 200px !important;
+  }
+
+  .lg\:pt-\[230px\]{
+    padding-top: 230px !important;
+  }
+
+  .lg\:pt-\[240px\]{
+    padding-top: 240px !important;
+  }
+
   .lg\:text-left{
     text-align: left !important;
   }
@@ -1492,8 +1504,17 @@ video {
     padding-right: 2.5rem !important;
   }
 
+  .xl\:py-5{
+    padding-top: 1.25rem !important;
+    padding-bottom: 1.25rem !important;
+  }
+
   .xl\:pt-40{
     padding-top: 10rem !important;
+  }
+
+  .xl\:pt-\[300px\]{
+    padding-top: 300px !important;
   }
 
   .xl\:text-7xl{

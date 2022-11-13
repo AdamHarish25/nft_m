@@ -24,7 +24,7 @@ const Navbar = () => {
   window.addEventListener("scroll", changeBackground);
 
   const className = {
-    container: `w-screen h-fit py-5 px-20 font-Sora fixed top-0 inset-x-0 ${
+    container: `w-screen h-fit py-2 xl:py-5 px-20 font-Sora fixed top-0 inset-x-0 ${
       openMenu || navbar ? "bg-white shadow-xl" : "bg-transparent shadow-none"
     } transition-colors duration-200`,
     desktopNav:
