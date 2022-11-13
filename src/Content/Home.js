@@ -29,16 +29,16 @@ const Home = () => {
   };
 
   const className = {
-    container: "w-screen h-auto lg:h-screen bg-homeBackground bg-cover p-10",
+    container: "w-screen h-auto lg:h-screen bg-homeBackground bg-cover p-10 mb-40",
     wrapper:
-      "h-full w-auto flex flex-col justify-center items-center gap-20 pt-40",
+      "h-full w-auto flex flex-col justify-center items-center gap-20 pt-[190px] xl:pt-40",
     searchNtitleBox:
       "h-fit flex flex-col items-center text-center gap-7 font-Sora",
     smlTitle: "font-medium text-gray-400 text-sm tracking-widest",
     vector: "w-7 lg:w-10 h-fit",
     vector2: "w-12 lg:w-16 h-fit",
     title: "flex gap-10",
-    fontTitle: "text-5xl lg:text-7xl font-bold",
+    fontTitle: "text-5xl lg:text-[65px] xl:text-7xl font-bold",
     subtitle: "text-gray-400 font-Inter text-lg",
     brandsBox: "w-fit h-fit p-10 flex gap-8 items-center",
     searchBox:

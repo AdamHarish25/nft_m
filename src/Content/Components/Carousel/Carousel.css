@@ -38,6 +38,8 @@
 
 .carousel-content.show-1-5 > * {
     width: calc(100% / 2);
+    flex-shrink: 0;
+    flex-grow: 1;
 }
 
 .carousel-content.show-1 > * {

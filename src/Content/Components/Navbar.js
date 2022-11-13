@@ -9,7 +9,7 @@ const Navbar = () => {
   const viewPort = useViewport().windowSize;
   const [navbar, setNavbar] = useState(false);
 
-  if (openMenu === true && viewPort.innerWidth > 1280) {
+  if (openMenu === true && viewPort.innerWidth > 1024) {
     setOpenMenu(false);
   }
 
@@ -28,24 +28,24 @@ const Navbar = () => {
       openMenu || navbar ? "bg-white shadow-xl" : "bg-transparent shadow-none"
     } transition-colors duration-200`,
     desktopNav:
-      "w-full h-fit hidden xl:grid grid-cols-3 place-items-center gap-20",
-    mobileNav: `w-full block xl:hidden ${openMenu ? "h-fit" : "h-28"}`,
+      "w-full h-fit hidden lg:grid grid-cols-3 place-items-center gap-20",
+    mobileNav: `w-full block lg:hidden ${openMenu ? "h-fit" : "h-24"}`,
     navigation: "w-full h-full flex justify-between items-center px-10 py-2",
     logoBox: "w-fit h-full flex items-center justify-start",
     logo: "w-fit h-[30px]",
     navBox:
-      "w-fit h-full inline-flex flex-col xl:flex-row gap-10 items-start xl:items-center text-gray-400 font-medium",
+      "w-fit h-full inline-flex flex-col lg:flex-row gap-10 items-start lg:items-center text-gray-400 text-sm xl:text-base font-medium",
     buttonMenu: "w-fit h-fit p-10 rounded-lg text-2xl",
     buttonBox: "h-fit p-10 flex justify-center items-center",
     menuBox: `p-7 flex justify-evenly items-center ${
       openMenu ? "visible h-fit opacity-100" : "invisible h-0 opacity-0"
     } transition-opacity duration-200`,
-    box: "w-fit xl:w-full h-full inline-flex flex-col xl:flex-row gap-5 items-end xl:items-center justify-center xl:justify-end",
+    box: "w-fit lg:w-full h-full inline-flex flex-col lg:flex-row gap-5 items-end lg:items-center justify-center lg:justify-end",
     buttons: {
       button1:
-        "w-36 h-auto p-5 rounded-xl border-2 border-[#7189e2] text-[#7189e2]",
+        "w-36 lg:w-auto xl:w-36 text-sm xl:text-base h-auto p-5 rounded-xl border-2 border-[#7189e2] text-[#7189e2]",
       button2:
-        "w-36 h-auto p-5 rounded-xl bg-gradient-to-br from-[#4745D0] to-[#2A27C9] text-white",
+        "w-36 lg:w-auto xl:w-36 text-sm xl:text-base h-auto p-5 rounded-xl bg-gradient-to-br from-[#4745D0] to-[#2A27C9] text-white",
     },
   };
 
