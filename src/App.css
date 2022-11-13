@@ -7,7 +7,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /*
-! tailwindcss v3.2.1 | MIT License | https://tailwindcss.com
+! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -38,6 +38,7 @@
 2. Prevent adjustments of font size after orientation changes in iOS.
 3. Use a more readable tab size.
 4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
 */
 
 html {
@@ -50,6 +51,9 @@ html {
   /* 3 */
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
+  -webkit-font-feature-settings: normal;
+          font-feature-settings: normal;
+  /* 5 */
 }
 
 /*
@@ -769,8 +773,8 @@ video {
   width: 1.5rem !important;
 }
 
-.w-\[450px\]{
-  width: 450px !important;
+.w-\[470px\]{
+  width: 470px !important;
 }
 
 .w-\[400px\]{
@@ -787,14 +791,6 @@ video {
 
 .w-4{
   width: 1rem !important;
-}
-
-.w-\[500px\]{
-  width: 500px !important;
-}
-
-.w-\[470px\]{
-  width: 470px !important;
 }
 
 .transform{
@@ -1317,10 +1313,6 @@ video {
     width: auto !important;
   }
 
-  .md\:grid-cols-2{
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  }
-
   .md\:bg-contain{
     background-size: contain !important;
   }
@@ -1349,10 +1341,6 @@ video {
 
   .lg\:w-16{
     width: 4rem !important;
-  }
-
-  .lg\:w-auto{
-    width: auto !important;
   }
 
   .lg\:w-full{
@@ -1403,12 +1391,12 @@ video {
     width: 1.75rem !important;
   }
 
-  .xl\:w-full{
-    width: 100% !important;
-  }
-
   .xl\:w-auto{
     width: auto !important;
+  }
+
+  .xl\:w-full{
+    width: 100% !important;
   }
 
   .xl\:grid-cols-3{
