@@ -14,15 +14,15 @@ function App() {
   const viewport = useViewport().windowSize;
 
 
-  if(isMobile === false && viewport.innerWidth <= 847){
+  if(isMobile === false && viewport.innerWidth <= 847 ){
     setIsMobile(true);
-  }else if(isMobile === true && viewport.innerWidth >= 848){
+  }else if(isMobile === true && viewport.innerWidth > 847){
     setIsMobile(false);
   }
 
   return isMobile ? (
   <div>
-    <MobileWarning/>
+      <MobileWarning/>
   </div>
   ) : (
   <div>
