@@ -4,11 +4,11 @@ import Icon2 from "../Attachments/Image/Icon/Icon-1.png";
 
 const Overline2 = () => {
     const className = {
-        container: "w-screen h-auto lg:h-screen p-10 grid grid-cols-1 lg:grid-cols-2 gap-10 my-10 place-items-center lg:place-items-stretch",
+        container: "w-screen h-auto lg:h-screen p-10 grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10 my-10 place-items-center lg:place-items-stretch",
         imagebox: "w-fit h-full",
         img: "w-fit h-96 lg:h-full object-contain",
-        descriptionBox: "h-full w-full p-5 space-y-10",
-        titleBox: "gap-2 lg:gap-5 flex flex-col text-2xl lg:text-3xl xl:text-5xl font-Sora font-semibold text-center lg:text-start",
+        descriptionBox: "h-full w-full p-5 space-y-10 flex flex-col items-center lg:items-start",
+        titleBox: "w-[400px] lg:w-auto gap-2 lg:gap-5 flex flex-col text-2xl lg:text-3xl xl:text-5xl font-Sora font-semibold text-center lg:text-start",
         sectiontitle: "font-Inter font-medium text-gray-400 tracking-widest text-sm",
         description: "font-Inter text-gray-400 text-sm font-normal",
         box: 'w-full h-auto flex items-center justify-center lg:justify-start gap-6',
@@ -41,7 +41,7 @@ const Overline2 = () => {
             </imagebox>
             <div className={className.descriptionBox}>
                 <h1 className={className.titleBox}>
-                    <p className={className.sectiontitle}>Overline</p> 
+                    <p className={className.sectiontitle}>OVERLINE</p> 
                     Habitant tristique aliquam in vel scelerisque
                     
                     <p className={className.description}>
@@ -55,7 +55,7 @@ const Overline2 = () => {
                             return (
                                 <div key={index} className={className.advantage}>
                                     <div className={className.iconBox}>
-                                        <img src={data.icon} alt={data.title}/>
+                                        <img draggable={false} src={data.icon} alt={data.title}/>
                                     </div>
                                     <h1 className={className.titleBox2}>
                                         {data.title}

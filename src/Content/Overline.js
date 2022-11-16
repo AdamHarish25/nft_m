@@ -5,9 +5,9 @@ const Overline = () => {
     container:
       "w-screen h-auto grid grid-cols-1 lg:grid-cols-2 gap-10 p-20 place-items-center",
     titleBox:
-      "w-full h-full text-center lg:text-left space-y-10 text-gray-500 font-Sora order-2 lg:order-1",
+      "w-[400px] h-full text-center lg:text-left space-y-5 text-gray-500 font-Sora order-2 lg:order-1",
     sectTitle: "tracking-widest font-Inter",
-    title: "text-black font-semibold text-5xl",
+    title: "text-black font-semibold text-2xl lg:text-3xl xl:text-5xl",
     buttonBox:
       "w-full h-fit flex justify-center lg:justify-start items-center gap-5",
     button1:
@@ -21,12 +21,12 @@ const Overline = () => {
   return (
     <div className={className.container}>
       <titlebox className={className.titleBox}>
-        <p className={className.sectTitle}>Overline</p>
+        <p className={className.sectTitle}>OVERLINE</p>
         <h1 className={className.title}>
-          Sapien ipsum <br /> scelerisque <br /> convallis fusce
+          Sapien ipsum scelerisque convallis fusce
         </h1>
         <p>
-          Ut amet vulputate faucibus vitae semper eget auctor. Diam <br />{" "}
+          Ut amet vulputate faucibus vitae semper eget auctor. Diam
           tempor pulvinar ultricies dolor feugiat aliquam commodo.
         </p>
         <buttonbox className={className.buttonBox}>
