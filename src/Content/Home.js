@@ -81,7 +81,7 @@ const Home = () => {
             </section2>
           </h1>
           <p className={className.subtitle}>Discover, collect and sell</p>
-          <searchbar className={className.searchBox}>
+          <form className={className.searchBox}>
             <input
               className={className.searchBar}
               placeholder="Items, collections and creators"
@@ -113,7 +113,7 @@ const Home = () => {
                 })}
               </dropdownMenu>
             </section>
-          </searchbar>
+          </form>
         </div>
         <brands className={className.brandsBox}>
           {brandsData.map(({ src, alt }, index) => {
