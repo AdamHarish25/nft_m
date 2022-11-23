@@ -14,10 +14,10 @@ const LiveAuctions = () => {
     cardHeader: "w-full h-fit",
     headerImg: "w-full h-fit object-cover",
     cardBody: "w-full h-fit",
-    headerBox: "h-fit flex items-center justify-between my-5",
-    cardTitle: "font-semibold w-[250px] text-sm xl:text-base",
+    headerBox: "w-full h-fit flex items-center justify-between my-5",
+    cardTitle: "font-semibold w-[190px] text-sm",
     price:
-      "bg-[#2A27C9]/20 text-[#2A27C9] w-fit h-fit p-2 rounded-lg text-center font-semibold text-sm xl:text-base",
+      "bg-[#2A27C9]/20 text-[#2A27C9] w-fit h-fit p-2 rounded-lg text-center font-semibold text-sm",
     countDown:
       "flex items-center gap-5 font-semibold text-sm lg:text-base font-Inter",
     cardFooter:

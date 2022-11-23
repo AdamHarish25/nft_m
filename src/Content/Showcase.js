@@ -23,7 +23,7 @@ const Showcase = () => {
         "w-fit py-3 px-5 h-fit rounded-xl text-lg font-semibold text-gray-400 border-2 border-gray-400",
     card: {
       container: "flex justify-center",
-      card: "w-96 2xl:w-auto h-fit px-5",
+      card: "w-96 h-fit px-5",
       cardHeader: "w-full h-fit",
       headerImg: "w-full h-fit object-cover rounded-xl my-5",
       cardBody: "w-full h-fit",

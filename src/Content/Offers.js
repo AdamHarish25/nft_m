@@ -36,7 +36,7 @@ const Offers = () => {
       descriptionBox: "w-full h-auto space-y-2",
       listTitle: "font-Sora font-semibold text-sm",
       box: "h-fit flex items-center justify-between w-full",
-      countDownBox: "flex items-center gap-2 font-semibold text-[10px]",
+      countDownBox: "flex items-center gap-2 font-semibold text-[10px] lg:text-sm",
       timer: "flex gap-1 items-center font-Inter",
       price:
         "bg-[#2A27C9]/20 text-[#2A27C9] w-auto h-auto p-[6px] rounded-lg text-center font-semibold text-[8px] xl:text-xs",
@@ -160,7 +160,7 @@ const Offers = () => {
                       <h1 className={className.box3.listTitle}>{title}</h1>
                       <div className={className.box3.box}>
                         <h1 className={className.box3.countDownBox}>
-                          <RiTimerFill className="w-3 h-3" />
+                          <RiTimerFill className="w-3 h-3 lg:w-4 lg:h-4" />
                           <span className={className.box3.timer}>
                             <CountdownTimer targetDate={timer} />
                             min left
