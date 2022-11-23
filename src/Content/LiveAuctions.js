@@ -7,9 +7,9 @@ import CountdownTimer from "./Components/Timer/Timer";
 const LiveAuctions = () => {
   const className = {
     container:
-      "w-screen h-auto py-20 flex flex-col justify-center items-center font-Sora",
+      "w-screen h-auto py-20 flex flex-col justify-center items-center font-Sora px-0 lg:px-10",
     title: "text-3xl mb-10",
-    cardContainer: "flex justify-center xl:justify-start",
+    cardContainer: "flex justify-center",
     card: "w-96 p-10 h-fit",
     cardHeader: "w-full h-fit",
     headerImg: "w-full h-fit object-cover",

@@ -31,7 +31,7 @@ const Navbar = () => {
       "w-full h-fit hidden lg:grid grid-cols-3 place-items-center gap-24 xl:gap-20",
     mobileNav: `w-full block lg:hidden ${openMenu ? "h-fit" : "h-24"}`,
     navigation: "w-full h-full flex justify-between items-center px-10 py-2",
-    logoBox: "w-fit h-full flex items-center justify-start",
+    logoBox: "w-full h-full flex items-center justify-start",
     logo: "w-fit h-[30px]",
     navBox:
       "w-fit h-full inline-flex flex-col lg:flex-row gap-10 items-start lg:items-center text-gray-400 text-sm xl:text-base font-medium",
@@ -40,7 +40,7 @@ const Navbar = () => {
     menuBox: `p-7 flex justify-evenly items-center ${
       openMenu ? "visible h-fit opacity-100" : "invisible h-0 opacity-0"
     } transition-opacity duration-200`,
-    box: "w-fit lg:w-full h-full inline-flex flex-col lg:flex-row gap-5 items-end lg:items-center justify-center lg:justify-end",
+    box: "w-fit lg:w-full h-full inline-flex flex-col lg:flex-row gap-5 items-end lg:items-center justify-end",
     buttons: {
       button1:
         "w-36 lg:w-auto xl:w-36 text-sm xl:text-base h-auto p-5 rounded-xl border-2 border-[#7189e2] text-[#7189e2]",

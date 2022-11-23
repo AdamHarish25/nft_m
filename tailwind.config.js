@@ -25,6 +25,7 @@ module.exports = {
     extend: {
       gridTemplateColumns: {
         SL: "auto 1fr",
+        "2auto": "repeat(2, minmax(auto, auto))",
       },
       gridTemplateRows: {
         SL: "auto 1fr",

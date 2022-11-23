@@ -8,6 +8,7 @@ import MobileWarning from "./Content/mobileWarning";
 import Offers from "./Content/Offers";
 import Overline from "./Content/Overline";
 import Overline2 from "./Content/Overline2";
+import Showcase from "./Content/Showcase";
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -25,12 +26,13 @@ function App() {
       <MobileWarning/>
   </div>
   ) : (
-  <div>
+  <div className="overflow-x-auto lg:overflow-x-hidden">
       <Home />
       <LiveAuctions />
       <Overline />
       <Offers />
       <Overline2/>
+      <Showcase/>
       <Navbar />
   </div>);
 }

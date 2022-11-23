@@ -10,16 +10,16 @@ const Offers = () => {
   const className = {
     container: "w-screen h-auto p-10 grid place-items-center",
     boxes:
-      "w-fit h-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-5 place-items-center lg:place-items-stretch",
+      "w-fit h-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-5 place-items-center lg:place-items-stretch relative",
     box1: {
-      box1: "w-[450px] lg:w-auto h-auto py-10 px-4 border border-gray-400 rounded-xl font-Sora",
+      box1: "w-[400px] lg:w-auto h-full py-10 px-4 border border-gray-400 rounded-xl font-Sora",
       title: "font-bold text-xl xl:text-2xl px-5",
       buttonbox: "px-6 w-full",
       button:
         "w-full p-3 h-fit rounded-xl font-semibold text-gray-400 border-2 border-gray-400",
     },
     box2: {
-      box2: "w-full md:w-auto h-full md:h-auto py-10 font-Sora flex flex-col items-center justify-end bg-box2 bg-contain bg-no-repeat bg-bottom",
+      box2: "w-full md:w-auto h-full py-10 font-Sora flex flex-col items-center justify-end bg-box2 bg-contain bg-no-repeat bg-bottom",
       handImg: "w-full h-fit",
       bottomComponents: "w-full px-10 h-fit space-y-10 text-white",
       descriptionBox: "space-y-2 w-fit",
@@ -28,16 +28,16 @@ const Offers = () => {
       button: "w-full h-fit p-5 rounded-lg bg-purple-500 font-bold font-Sora",
     },
     box3: {
-      box3: "w-full h-full space-y-10 py-10 border border-gray-400 rounded-xl font-Sora",
+      box3: "w-full h-auto space-y-10 py-10 border border-gray-400 rounded-xl font-Sora absolute lg:static lg:block inset-x-0 bottom-0",
       title: "font-bold text-xl xl:text-2xl px-10",
-      lists: "w-full h-auto px-5 xl:px-10 list-none space-y-5",
+      lists: "w-full h-auto px-10 lg:px-5 xl:px-10 list-none space-y-5",
       list: "w-full h-fit flex items-center gap-3",
       img: "w-[80px] xl:w-auto h-auto rounded-3xl",
       descriptionBox: "w-full h-auto space-y-2",
       listTitle: "font-Sora font-semibold text-sm",
       box: "h-fit flex items-center justify-between w-full",
-      countDownBox: "flex items-center gap-3 font-semibold text-xs",
-      timer: "flex gap-2 items-center font-Inter",
+      countDownBox: "flex items-center gap-2 font-semibold text-[10px]",
+      timer: "flex gap-1 items-center font-Inter",
       price:
         "bg-[#2A27C9]/20 text-[#2A27C9] w-auto h-auto p-[6px] rounded-lg text-center font-semibold text-[8px] xl:text-xs",
       like: "flex items-center gap-5",
@@ -141,6 +141,10 @@ const Offers = () => {
           </div>
         </box2>
 
+         <stabilizer className="w-full h-[40rem] lg:hidden">
+          <br/>
+         </stabilizer>     
+
         <box3 className={className.box3.box3}>
           <h1 className={className.box3.title}>
             Top NFT at a lower <br /> price
@@ -156,7 +160,7 @@ const Offers = () => {
                       <h1 className={className.box3.listTitle}>{title}</h1>
                       <div className={className.box3.box}>
                         <h1 className={className.box3.countDownBox}>
-                          <RiTimerFill className="w-4 h-4" />
+                          <RiTimerFill className="w-3 h-3" />
                           <span className={className.box3.timer}>
                             <CountdownTimer targetDate={timer} />
                             min left

@@ -5,7 +5,7 @@ const Overline = () => {
     container:
       "w-screen h-auto grid grid-cols-1 lg:grid-cols-2 gap-10 p-20 place-items-center",
     titleBox:
-      "w-[400px] h-full text-center lg:text-left space-y-5 text-gray-500 font-Sora order-2 lg:order-1",
+      "w-[400px] h-fit text-center lg:text-left space-y-5 text-gray-500 font-Sora order-2 lg:order-1",
     sectTitle: "tracking-widest font-Inter",
     title: "text-black font-semibold text-2xl lg:text-3xl xl:text-5xl",
     buttonBox:

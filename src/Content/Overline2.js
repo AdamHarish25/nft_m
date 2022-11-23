@@ -4,10 +4,10 @@ import Icon2 from "../Attachments/Image/Icon/Icon-1.png";
 
 const Overline2 = () => {
     const className = {
-        container: "w-screen h-auto lg:h-screen p-10 grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10 my-10 place-items-center lg:place-items-stretch",
+        container: "w-screen h-auto lg:h-screen p-10 grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10 my-10 place-items-center",
         imagebox: "w-fit h-full",
         img: "w-fit h-96 lg:h-full object-contain",
-        descriptionBox: "h-full w-full p-5 space-y-10 flex flex-col items-center lg:items-start",
+        descriptionBox: "h-fit w-full p-5 space-y-10 flex flex-col items-center lg:items-start",
         titleBox: "w-[400px] lg:w-auto gap-2 lg:gap-5 flex flex-col text-2xl lg:text-3xl xl:text-5xl font-Sora font-semibold text-center lg:text-start",
         sectiontitle: "font-Inter font-medium text-gray-400 tracking-widest text-sm",
         description: "font-Inter text-gray-400 text-sm font-normal",
