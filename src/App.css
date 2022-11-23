@@ -597,6 +597,12 @@ video {
   }
 }
 
+@media (min-width: 1580px){
+  .container{
+    max-width: 1580px;
+  }
+}
+
 @media (min-width: 1806px){
   .container{
     max-width: 1806px;
@@ -1642,5 +1648,19 @@ video {
   .xl\:text-5xl{
     font-size: 3rem !important;
     line-height: 1 !important;
+  }
+}
+
+@media (min-width: 1580px){
+  .lxl\:w-auto{
+    width: auto !important;
+  }
+
+  .lxl\:w-96{
+    width: 24rem !important;
+  }
+
+  .lxl\:w-full{
+    width: 100% !important;
   }
 }

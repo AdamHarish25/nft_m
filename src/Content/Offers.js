@@ -47,10 +47,10 @@ const Offers = () => {
         "w-full p-3 h-fit rounded-xl font-semibold text-gray-400 border-2 border-gray-400",
     },
     cards: {
-      cardContainer: "w-fit flex justify-start",
-      card: "w-fit px-4 h-fit",
+      cardContainer: "w-fit lxl:w-auto flex",
+      card: "w-fit lxl:w-96 h-fit",
       cardHeader: "w-full h-fit",
-      headerImg: "w-60 h-fit object-cover rounded-xl my-5",
+      headerImg: "w-60 lxl:w-full h-fit object-cover rounded-xl my-5",
       cardBody: "w-full h-fit",
       headerBox: "h-fit flex items-center justify-between my-5",
       cardTitle: "font-semibold w-[250px] text-sm xl:text-base",
