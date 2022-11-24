@@ -32,14 +32,14 @@ const Offers = () => {
       title: "font-bold text-xl xl:text-2xl px-10",
       lists: "w-full h-auto px-10 lg:px-5 xl:px-10 list-none space-y-5",
       list: "w-full h-fit flex items-center gap-3",
-      img: "w-[80px] xl:w-auto h-auto rounded-3xl",
+      img: "w-32 lxl:w-52 h-auto rounded-3xl",
       descriptionBox: "w-full h-auto space-y-2",
       listTitle: "font-Sora font-semibold text-sm",
       box: "h-fit flex items-center justify-between w-full",
-      countDownBox: "flex items-center gap-2 font-semibold text-[10px] lg:text-sm",
+      countDownBox: "flex items-center gap-2 font-semibold text-[10px] lg:text-[9px] xl:text-[10px] lxl:text-xs 2xl:text-sm",
       timer: "flex gap-1 items-center font-Inter",
       price:
-        "bg-[#2A27C9]/20 text-[#2A27C9] w-auto h-auto p-[6px] rounded-lg text-center font-semibold text-[8px] xl:text-xs",
+        "bg-[#2A27C9]/20 text-[#2A27C9] w-auto h-auto p-[6px] rounded-lg text-center font-semibold text-[10px] lg:text-[9px] xl:text-[10px] lxl:text-sm",
       like: "flex items-center gap-5",
       bidders: "text-xs font-Inter",
       buttonbox: "px-10 w-full",
@@ -141,7 +141,7 @@ const Offers = () => {
           </div>
         </box2>
 
-         <stabilizer className="w-full h-[40rem] lg:hidden">
+         <stabilizer className="w-full h-[50rem] lg:hidden">
           <br/>
          </stabilizer>     
 
@@ -160,7 +160,7 @@ const Offers = () => {
                       <h1 className={className.box3.listTitle}>{title}</h1>
                       <div className={className.box3.box}>
                         <h1 className={className.box3.countDownBox}>
-                          <RiTimerFill className="w-3 h-3 lg:w-4 lg:h-4" />
+                          <RiTimerFill className="w-3 h-3 lxl:w-4 lxl:h-4" />
                           <span className={className.box3.timer}>
                             <CountdownTimer targetDate={timer} />
                             min left

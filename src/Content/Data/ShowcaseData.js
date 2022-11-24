@@ -30,7 +30,8 @@ const Showcase2 = [
         title: "Faucibus habitasse at et platea massa mauris",
         timer: targetmills + currenttime('November 20, 2022, 11:00:00'),
         price: "2.55 ETH",
-        bidders: 83
+        bidders: 83,
+        tag: "Architecture",
     },
     {
         src:  showcase2_2 ,
@@ -38,7 +39,9 @@ const Showcase2 = [
         title: "Diam purus sagittis nisl erat mauris",
         timer: targetmills + currenttime('November 19, 2022, 11:00:00'),
         price: "4.32 ETH",
-        bidders: 143
+        bidders: 143,
+        tag: "Architecture",
+
     },
     {
         src:  showcase2_3 ,
@@ -46,7 +49,8 @@ const Showcase2 = [
         title: "Nascetur mauris viverra vel id id sem leo",
         timer: targetmills + currenttime('November 19, 2022, 04:00:00'),
         price: "1.34 ETH",
-        bidders: 49
+        bidders: 49,
+        tag: "Photography",
     },
     {
         src:  showcase2_4 ,
@@ -54,7 +58,8 @@ const Showcase2 = [
         title: "Velit, fusce id non dui amet amet maecenas",
         timer: targetmills + currenttime('November 05, 2022, 11:00:00'),
         price: "1.23 ETH",
-        bidders: 340
+        bidders: 340,
+        tag: "Music",
     },
     {
         src:  showcase2_5 ,
@@ -62,7 +67,8 @@ const Showcase2 = [
         title: "Tellus duis neque fringilla pulvinar gravida",
         timer: targetmills + currenttime('November 09, 2022, 11:00:00'),
         price: "1.89 ETH",
-        bidders: 125
+        bidders: 125,
+        tag: "Photography",
     },
     {
         src:  showcase2_6 ,
@@ -70,7 +76,8 @@ const Showcase2 = [
         title: "Odio lacus neque ultrices purus eget",
         timer: targetmills + currenttime('November 22, 2022, 11:00:00'),
         price: "2.79 ETH",
-        bidders: 352
+        bidders: 352,
+        tag: "Games",
     },
 ]
 

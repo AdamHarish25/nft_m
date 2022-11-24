@@ -50,8 +50,8 @@
 
 .carousel-content.show-2 > * {
     width: 50%;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .carousel-content.show-3 > * {

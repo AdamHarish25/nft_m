@@ -9,6 +9,7 @@ import { Showcase2 } from "./Data/ShowcaseData";
 const Showcase = () => {
 
   const [isBigScreen, setBigScreen] = useState(false);
+  const [filtered, setFilter] = useState("");
   const viewport = useViewport().windowSize;
 
   const className = {
@@ -54,15 +55,15 @@ const Showcase = () => {
         <p>Most popular live auctions</p>
       </h1>
       <div className={className.buttonCols}>
-        <button className={className.navigationButton}>Architecture</button>
-        <button className={className.navigationButton}>Photography</button>
-        <button className={className.navigationButton}>Games</button>
-        <button className={className.navigationButton}>Music</button>
+        <button onClick={() => (filtered === "Architecture" ? setFilter("") : setFilter("Architecture"))} className={className.navigationButton}>Architecture</button>
+        <button onClick={() => (filtered === "Photography" ? setFilter("") : setFilter("Photography"))} className={className.navigationButton}>Photography</button>
+        <button onClick={() => (filtered === "Games" ? setFilter("") : setFilter("Games"))} className={className.navigationButton}>Games</button>
+        <button onClick={() => (filtered === "Music" ? setFilter("") : setFilter("Music"))} className={className.navigationButton}>Music</button>
       </div>
 
       {isBigScreen ? (
         <div className={className.cards}>
-          {Showcase2.map(({ src, alt, title, timer, bidders, price }, index) => {
+          {(filtered === "" ? Showcase2 : Showcase2.filter(({tag}) => tag === filtered)).map(({ src, alt, title, timer, bidders, price }, index) => {
             return (
               <card key={index} className={className.card.card}>
                 <cardheader className={className.card.cardHeader}>
@@ -96,11 +97,11 @@ const Showcase = () => {
                 </cardfooter>
               </card>
             )
-          })}
+          }) }
         </div>
       ) : (
-        <Carousel show={3}>
-          {Showcase2.map(({ src, alt, title, timer, bidders, price }, index) => {
+        <Carousel show={filtered === "" ? 3 : parseInt(Showcase2.filter(({tag}) => tag === filtered).length)}>
+          {(filtered === "" ? Showcase2 : Showcase2.filter(({tag}) => tag === filtered)).map(({ src, alt, title, timer, bidders, price }, index) => {
             return (
               <div key={index} className={className.card.container}>
                 <card className={className.card.card}>
@@ -136,7 +137,7 @@ const Showcase = () => {
                 </card>
               </div>
             )
-          })}
+          }) }
         </Carousel>
       )}
 
