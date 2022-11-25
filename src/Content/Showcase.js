@@ -4,7 +4,7 @@ import { RiTimerFill } from "react-icons/ri";
 import Carousel from "./Components/Carousel/Carousel";
 import CountdownTimer from "./Components/Timer/Timer";
 import { useViewport } from "./Components/Viewport";
-import { Showcase2 } from "./Data/ShowcaseData";
+import { ShowcaseData } from "./Data/ShowcaseData";
 
 const Showcase = () => {
 
@@ -21,7 +21,7 @@ const Showcase = () => {
     cards: "w-auto h-auto flex items-center justify-center gap-2",
     buttonBox: "w-full p-10 flex justify-center items-center",
     button:
-        "w-fit py-3 px-5 h-fit rounded-xl text-lg font-semibold text-gray-400 border-2 border-gray-400",
+      "w-fit py-3 px-5 h-fit rounded-xl text-lg font-semibold text-gray-400 border-2 border-gray-400",
     card: {
       container: "flex justify-center",
       card: "w-96 h-fit px-5",
@@ -35,8 +35,12 @@ const Showcase = () => {
       countDownBox: "flex items-center gap-3 font-semibold text-xs xl:text-sm",
       like: "flex items-center gap-5 text-red-600",
       timer: "flex gap-2 items-center font-Inter",
+      sections:
+        "w-full flex justify-between items-center text-gray-500 text-xs xl:text-sm gap-5",
+      people: "flex justify-start items-center",
+      person: "w-6 h-6 xl:w-7 xl:h-7 object-cover rounded-full",
       cardFooter:
-        "my-5 w-full h-fit border-t border-t-gray-400 py-5 flex justify-between items-center text-gray-500 text-xs xl:text-sm gap-5",
+        "my-5 w-full h-fit border-t border-t-gray-400 py-5 flex justify-start items-center gap-5",
     }
   };
 
@@ -63,7 +67,7 @@ const Showcase = () => {
 
       {isBigScreen ? (
         <div className={className.cards}>
-          {(filtered === "" ? Showcase2 : Showcase2.filter(({tag}) => tag === filtered)).map(({ src, alt, title, timer, bidders, price }, index) => {
+          {(filtered === "" ? ShowcaseData : ShowcaseData.filter(({ tag }) => tag === filtered)).map(({ src, alt, title, timer, bidders, price, people }, index) => {
             return (
               <card key={index} className={className.card.card}>
                 <cardheader className={className.card.cardHeader}>
@@ -90,18 +94,25 @@ const Showcase = () => {
                   </headerbox>
                 </cardbody>
                 <cardfooter className={className.card.cardFooter}>
-                  <h1>{bidders} people are bidding</h1>
-                  <div className={className.card.like}>
-                    <AiFillHeart />
-                  </div>
-                </cardfooter>
+                    <people className={className.card.people}>
+                      {people.map(({src, alt}, index) => {
+                        return <img key={index} src={src} alt={alt} className={className.card.person}/>
+                      })}
+                    </people>
+                    <div className={className.card.sections}>
+                      <h1>{bidders} people are bidding</h1>
+                      <div className={className.card.like}>
+                        <AiFillHeart />
+                      </div>
+                    </div>
+                  </cardfooter>
               </card>
             )
-          }) }
+          })}
         </div>
       ) : (
-        <Carousel show={filtered === "" ? 3 : parseInt(Showcase2.filter(({tag}) => tag === filtered).length)}>
-          {(filtered === "" ? Showcase2 : Showcase2.filter(({tag}) => tag === filtered)).map(({ src, alt, title, timer, bidders, price }, index) => {
+        <Carousel show={filtered === "" ? 3 : parseInt(ShowcaseData.filter(({ tag }) => tag === filtered).length)}>
+          {(filtered === "" ? ShowcaseData : ShowcaseData.filter(({ tag }) => tag === filtered)).map(({ src, alt, title, timer, bidders, price, people }, index) => {
             return (
               <div key={index} className={className.card.container}>
                 <card className={className.card.card}>
@@ -129,22 +140,29 @@ const Showcase = () => {
                     </headerbox>
                   </cardbody>
                   <cardfooter className={className.card.cardFooter}>
-                    <h1>{bidders} people are bidding</h1>
-                    <div className={className.card.like}>
-                      <AiFillHeart />
+                    <people className={className.card.people}>
+                      {people.map(({src, alt}, index) => {
+                        return <img key={index} src={src} alt={alt} className={className.card.person}/>
+                      })}
+                    </people>
+                    <div className={className.card.sections}>
+                      <h1>{bidders} people are bidding</h1>
+                      <div className={className.card.like}>
+                        <AiFillHeart />
+                      </div>
                     </div>
                   </cardfooter>
                 </card>
               </div>
             )
-          }) }
+          })}
         </Carousel>
       )}
 
       <div className={className.buttonBox}>
-          <button className={className.button}>
-            Show me more
-          </button>
+        <button className={className.button}>
+          Show me more
+        </button>
       </div>
     </div>
   )
