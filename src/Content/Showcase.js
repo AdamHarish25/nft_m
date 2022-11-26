@@ -8,8 +8,8 @@ import { ShowcaseData } from "./Data/ShowcaseData";
 
 const Showcase = () => {
 
-  const [isBigScreen, setBigScreen] = useState(false);
-  const [filtered, setFilter] = useState("");
+  const [ isBigScreen, setBigScreen ] = useState(false);
+  const [ filtered, setFilter ] = useState("");
   const viewport = useViewport().windowSize;
 
   const className = {
@@ -44,128 +44,131 @@ const Showcase = () => {
     }
   };
 
-  if (isBigScreen === false && viewport.innerWidth >= 1860) {
-    setBigScreen(true)
-  } else if (isBigScreen === true && viewport.innerWidth < 1860) {
-    setBigScreen(false)
+  if (isBigScreen === false && viewport.innerWidth >= 1860)
+  {
+    setBigScreen(true);
+  } else if (isBigScreen === true && viewport.innerWidth < 1860)
+  {
+    setBigScreen(false);
   }
 
   return (
-    <div className={className.container}>
-      <h1 className={className.titleHeader}>
-        <p className={className.sectionTitle}>
+    <div className={ className.container }>
+      <h1 className={ className.titleHeader }>
+        <p className={ className.sectionTitle }>
           OVERLINE
         </p>
         <p>Most popular live auctions</p>
       </h1>
-      <div className={className.buttonCols}>
-        <button onClick={() => (filtered === "Architecture" ? setFilter("") : setFilter("Architecture"))} className={className.navigationButton}>Architecture</button>
-        <button onClick={() => (filtered === "Photography" ? setFilter("") : setFilter("Photography"))} className={className.navigationButton}>Photography</button>
-        <button onClick={() => (filtered === "Games" ? setFilter("") : setFilter("Games"))} className={className.navigationButton}>Games</button>
-        <button onClick={() => (filtered === "Music" ? setFilter("") : setFilter("Music"))} className={className.navigationButton}>Music</button>
+      <div className={ className.buttonCols }>
+        <button onClick={ () => (filtered === "Architecture" ? setFilter("") : setFilter("Architecture")) } className={ className.navigationButton }>Architecture</button>
+        <button onClick={ () => (filtered === "Photography" ? setFilter("") : setFilter("Photography")) } className={ className.navigationButton }>Photography</button>
+        <button onClick={ () => (filtered === "Games" ? setFilter("") : setFilter("Games")) } className={ className.navigationButton }>Games</button>
+        <button onClick={ () => (filtered === "Music" ? setFilter("") : setFilter("Music")) } className={ className.navigationButton }>Music</button>
       </div>
 
-      {isBigScreen ? (
-        <div className={className.cards}>
-          {(filtered === "" ? ShowcaseData : ShowcaseData.filter(({ tag }) => tag === filtered)).map(({ src, alt, title, timer, bidders, price, people }, index) => {
+      { isBigScreen ? (
+        <div className={ className.cards }>
+          { (filtered === "" ? ShowcaseData : ShowcaseData.filter(({ tag }) => tag === filtered)).map(({ src, alt, title, timer, bidders, price, people }, index) => {
             return (
-              <card key={index} className={className.card.card}>
-                <cardheader className={className.card.cardHeader}>
+              <card key={ index } className={ className.card.card }>
+                <cardheader className={ className.card.cardHeader }>
                   <img
-                    draggable={false}
-                    src={src}
-                    alt={alt}
-                    className={className.card.headerImg}
+                    draggable={ false }
+                    src={ src }
+                    alt={ alt }
+                    className={ className.card.headerImg }
                   />
                 </cardheader>
-                <cardbody className={className.card.cardBody}>
-                  <h1 className={className.card.cardTitle}>{title}</h1>
-                  <headerbox className={className.card.headerBox}>
-                    <h1 className={className.card.countDownBox}>
+                <cardbody className={ className.card.cardBody }>
+                  <h1 className={ className.card.cardTitle }>{ title }</h1>
+                  <headerbox className={ className.card.headerBox }>
+                    <h1 className={ className.card.countDownBox }>
                       <RiTimerFill className="w-5 h-5" />
-                      <span className={className.card.timer}>
-                        <CountdownTimer targetDate={timer} />
+                      <span className={ className.card.timer }>
+                        <CountdownTimer targetDate={ timer } />
                         min left
                       </span>
                     </h1>
-                    <price className={className.card.price}>
-                      {price}
+                    <price className={ className.card.price }>
+                      { price }
                     </price>
                   </headerbox>
                 </cardbody>
-                <cardfooter className={className.card.cardFooter}>
-                    <people className={className.card.people}>
-                      {people.map(({src, alt}, index) => {
-                        return <img key={index} src={src} alt={alt} className={className.card.person}/>
-                      })}
-                    </people>
-                    <div className={className.card.sections}>
-                      <h1>{bidders} people are bidding</h1>
-                      <div className={className.card.like}>
-                        <AiFillHeart />
-                      </div>
+                <cardfooter className={ className.card.cardFooter }>
+                  <people className={ className.card.people }>
+                    { people.map(({ src, alt }, index) => {
+                      return <img key={ index } src={ src } alt={ alt } className={ className.card.person } />;
+                    }) }
+                  </people>
+                  <div className={ className.card.sections }>
+                    <h1>{ bidders } people are bidding</h1>
+                    <div className={ className.card.like }>
+                      <AiFillHeart />
                     </div>
-                  </cardfooter>
+                  </div>
+                </cardfooter>
               </card>
-            )
-          })}
+            );
+          }) }
         </div>
       ) : (
-        <Carousel show={3}>
-          {(filtered === "" ? ShowcaseData : ShowcaseData.filter(({ tag }) => tag === filtered)).map(({ src, alt, title, timer, bidders, price, people }, index) => {
+        <Carousel show={ 3 }>
+          { (filtered === "" ? ShowcaseData : ShowcaseData.filter(({ tag }) => tag === filtered)).map(({ src, alt, title, timer, bidders, price, people }, index) => {
             return (
-              <div key={index} className={className.card.container}>
-                <card className={className.card.card}>
-                  <cardheader className={className.card.cardHeader}>
+              <div key={ index } className={ className.card.container }>
+                <card className={ className.card.card }>
+                  <cardheader className={ className.card.cardHeader }>
                     <img
-                      draggable={false}
-                      src={src}
-                      alt={alt}
-                      className={className.card.headerImg}
+                      draggable={ false }
+                      src={ src }
+                      alt={ alt }
+                      className={ className.card.headerImg }
                     />
                   </cardheader>
-                  <cardbody className={className.card.cardBody}>
-                    <h1 className={className.card.cardTitle}>{title}</h1>
-                    <headerbox className={className.card.headerBox}>
-                      <h1 className={className.card.countDownBox}>
+                  <cardbody className={ className.card.cardBody }>
+                    <h1 className={ className.card.cardTitle }>{ title }</h1>
+                    <headerbox className={ className.card.headerBox }>
+                      <h1 className={ className.card.countDownBox }>
                         <RiTimerFill className="w-5 h-5" />
-                        <span className={className.card.timer}>
-                          <CountdownTimer targetDate={timer} />
+                        <span className={ className.card.timer }>
+                          <CountdownTimer targetDate={ timer } />
                           min left
                         </span>
                       </h1>
-                      <price className={className.card.price}>
-                        {price}
+                      <price className={ className.card.price }>
+                        { price }
                       </price>
                     </headerbox>
                   </cardbody>
-                  <cardfooter className={className.card.cardFooter}>
-                    <people className={className.card.people}>
-                      {people.map(({src, alt}, index) => {
-                        return <img key={index} src={src} alt={alt} className={className.card.person}/>
-                      })}
+                  <cardfooter className={ className.card.cardFooter }>
+                    <people className={ className.card.people }>
+                      { people.map(({ src, alt }, index) => {
+                        return <img key={ index } src={ src } alt={ alt } className={ className.card.person } />;
+                      }) }
                     </people>
-                    <div className={className.card.sections}>
-                      <h1>{bidders} people are bidding</h1>
-                      <button className={className.card.like}>
+                    <div className={ className.card.sections }>
+                      <h1>{ bidders } people are bidding</h1>
+                      <button className={ className.card.like }>
                         <AiFillHeart />
                       </button>
                     </div>
                   </cardfooter>
                 </card>
               </div>
-            )
-          })}
+            );
+          }) }
         </Carousel>
-      )}
+      ) }
 
-      <div className={className.buttonBox}>
-        <button className={className.button}>
+      <div className={ className.buttonBox }>
+        <button className={ className.button }>
           Show me more
         </button>
       </div>
+
     </div>
-  )
-}
+  );
+};
 
 export default Showcase;

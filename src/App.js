@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Navbar from "./Content/Components/Navbar";
 import { useViewport } from "./Content/Components/Viewport";
+import Counter from "./Content/Counter";
 import Home from "./Content/Home";
 import LiveAuctions from "./Content/LiveAuctions";
 import MobileWarning from "./Content/mobileWarning";
@@ -9,6 +10,14 @@ import Offers from "./Content/Offers";
 import Overline from "./Content/Overline";
 import Overline2 from "./Content/Overline2";
 import Showcase from "./Content/Showcase";
+
+const Spacing = () => (
+  <div className="w-screen px-10">
+    <br />
+    <hr />
+  </div>
+);
+
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -27,13 +36,18 @@ function App() {
   </div>
   ) : (
   <div className="overflow-x-hidden">
-      <Home />
-      <LiveAuctions />
-      <Overline />
-      <Offers />
-      <Overline2/>
-      <Showcase/>
-      <Navbar />
+        <Home />
+        <LiveAuctions />
+        <Overline /> 
+        <Offers />
+        <Overline2 />
+        <Showcase />
+
+        <Spacing />
+
+        <Counter />
+        
+        <Navbar />
   </div>);
 }
 
