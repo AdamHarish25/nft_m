@@ -13,7 +13,7 @@ const Showcase = () => {
   const viewport = useViewport().windowSize;
 
   const className = {
-    container: "w-screen h-auto p-10",
+    container: "w-screen h-auto p-10 overflow-x-hidden",
     titleHeader: "text-center font-Sora text-3xl font-bold space-y-2",
     sectionTitle: "text-gray-400 font-Inter text-sm font-normal tracking-widest",
     buttonCols: "w-full h-auto flex items-center justify-center py-10 gap-5",
@@ -111,7 +111,7 @@ const Showcase = () => {
           })}
         </div>
       ) : (
-        <Carousel show={filtered === "" ? 3 : parseInt(ShowcaseData.filter(({ tag }) => tag === filtered).length)}>
+        <Carousel show={3}>
           {(filtered === "" ? ShowcaseData : ShowcaseData.filter(({ tag }) => tag === filtered)).map(({ src, alt, title, timer, bidders, price, people }, index) => {
             return (
               <div key={index} className={className.card.container}>
@@ -147,9 +147,9 @@ const Showcase = () => {
                     </people>
                     <div className={className.card.sections}>
                       <h1>{bidders} people are bidding</h1>
-                      <div className={className.card.like}>
+                      <button className={className.card.like}>
                         <AiFillHeart />
-                      </div>
+                      </button>
                     </div>
                   </cardfooter>
                 </card>
