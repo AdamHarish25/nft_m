@@ -17,7 +17,7 @@ const Showcase = () => {
     titleHeader: "text-center font-Sora text-3xl font-bold space-y-2",
     sectionTitle: "text-gray-400 font-Inter text-sm font-normal tracking-widest",
     buttonCols: "w-full h-auto flex items-center justify-center py-10 gap-5",
-    navigationButton: "h-auto w-auto px-3 py-1 border border-[#7780A1] rounded-md text-[#7780A1]",
+    navigationButton: "h-auto w-auto px-3 py-1 rounded-md border-[#7780A1] text-[#7780A1] font-Sora transform duration-300",
     cards: "w-auto h-auto flex items-center justify-center gap-2",
     buttonBox: "w-full p-10 flex justify-center items-center",
     button:
@@ -61,10 +61,10 @@ const Showcase = () => {
         <p>Most popular live auctions</p>
       </h1>
       <div className={ className.buttonCols }>
-        <button onClick={ () => (filtered === "Architecture" ? setFilter("") : setFilter("Architecture")) } className={ className.navigationButton }>Architecture</button>
-        <button onClick={ () => (filtered === "Photography" ? setFilter("") : setFilter("Photography")) } className={ className.navigationButton }>Photography</button>
-        <button onClick={ () => (filtered === "Games" ? setFilter("") : setFilter("Games")) } className={ className.navigationButton }>Games</button>
-        <button onClick={ () => (filtered === "Music" ? setFilter("") : setFilter("Music")) } className={ className.navigationButton }>Music</button>
+        <button onClick={ () => (filtered === "Architecture" ? setFilter("") : setFilter("Architecture")) } className={ ` ${ className.navigationButton } ${ filtered === "Architecture" ? "font-bold border-2" : "font-normal border"}`}>Architecture</button>
+        <button onClick={ () => (filtered === "Photography" ? setFilter("") : setFilter("Photography")) } className={ `${ className.navigationButton } ${ filtered === "Photography" ? "font-bold border-2" : "font-normal border" }` }>Photography</button>
+        <button onClick={ () => (filtered === "Games" ? setFilter("") : setFilter("Games")) } className={ `${ className.navigationButton } ${ filtered === "Games" ? "font-bold border-2" : "font-normal border" }` }>Games</button>
+        <button onClick={ () => (filtered === "Music" ? setFilter("") : setFilter("Music")) } className={ `${ className.navigationButton } ${ filtered === "Music" ? "font-bold border-2" : "font-normal border" }` }>Music</button>
       </div>
 
       { isBigScreen ? (
