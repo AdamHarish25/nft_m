@@ -5,6 +5,7 @@ import fourth from "../../Attachments/Image/Carousel1/Item3.png";
 import fifth from "../../Attachments/Image/Carousel1/Item4.png";
 import first2 from "../../Attachments/Image/Carousel2/item-2-1.png";
 import second2 from "../../Attachments/Image/Carousel2/item-2-2.png";
+import third2 from "../../Attachments/Image/Carousel2/item-2-3.png";
 import ran1 from "../../Attachments/Image/random/random1.jpg";
 import ran2 from "../../Attachments/Image/random/random2.jpg";
 import ran3 from "../../Attachments/Image/random/random3.jpg";
@@ -119,6 +120,14 @@ export const Carousel2 = [
     title: "Senectus adipiscing nascetur accumsan etiam",
     price: "1.63 ETH",
     bidders: 98,
+    timer: targetmills + currenttime,
+  },
+  {
+    src: third2,
+    alt: "nft-2#3",
+    title: "Maecenas iaculis sem ut lacus tempor dapibus",
+    price: "2.98 ETH",
+    bidders: 135,
     timer: targetmills + currenttime,
   },
 ];

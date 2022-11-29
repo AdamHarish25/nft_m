@@ -113,7 +113,7 @@ const Showcase = () => {
           }) }
         </div>
       ) : (
-        <Carousel show={ 3 }>
+          <Carousel show={ 3 }>
           { (filtered === "" ? ShowcaseData : ShowcaseData.filter(({ tag }) => tag === filtered)).map(({ src, alt, title, timer, bidders, price, people }, index) => {
             return (
               <div key={ index } className={ className.card.container }>

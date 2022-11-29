@@ -7,7 +7,6 @@ const Carousel = (props) => {
   var { children, show } = props;
 
   const viewport = useViewport().windowSize;
-
   const [currentIndex, setCurrentIndex] = useState(0);
   const [Length, setLength] = useState(children && children.length);
 
@@ -57,21 +56,25 @@ const Carousel = (props) => {
 
   var carouselCountDisplay;
 
+  if(currentIndex > 0 && Length <= 2){
+    setCurrentIndex(0)
+  }
+
   if (show > 2) {
     if (viewport.innerWidth < 1080 && viewport.innerWidth >= 780) {
       show = 2;
-      carouselCountDisplay = `show-${show}`;
-    } else if (viewport.innerWidth < 780 && viewport.innerWidth >= 0) {
+      carouselCountDisplay = `show-${ show }`;
+    } else if(viewport.innerWidth < 780 && viewport.innerWidth >= 0) {
       show = 1;
-      carouselCountDisplay = `show-${show}`;
+      carouselCountDisplay = `show-${ show }`;
     } else if(viewport.innerWidth >= 1600 && viewport.innerWidth < 1800){
       show = 4;
-      carouselCountDisplay = `show-${show}`;
+      carouselCountDisplay = `show-${ show }`;
     } else if(viewport.innerWidth >= 1800){
       show = 5;
-      carouselCountDisplay = `show-${show}`;
+      carouselCountDisplay = `show-${ show }`;
     } else {
-      carouselCountDisplay = `show-${show}`;
+      carouselCountDisplay = `show-${ show }`;
     }
   } else if (show === 1.5) {
     if(viewport.innerWidth < 1280 && viewport.innerWidth >= 1024){
@@ -82,11 +85,11 @@ const Carousel = (props) => {
       carouselCountDisplay = `show-1-5`;
     }
   } else {
-    if (viewport.innerWidth <= 1000 && viewport.innerWidth > 0) {
+    if(viewport.innerWidth <= 1000 && viewport.innerWidth > 0) {
       show = 1;
-      carouselCountDisplay = `show-${show}`;
+      carouselCountDisplay = `show-${ show }`;
     } else {
-      carouselCountDisplay = `show-${show}`;
+      carouselCountDisplay = `show-${ show }`;
     }
   }
 
