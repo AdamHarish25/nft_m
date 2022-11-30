@@ -12,14 +12,14 @@ const Offers = () => {
     boxes:
       "w-fit h-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-5 place-items-center lg:place-items-stretch relative",
     box1: {
-      box1: "w-[400px] lg:w-auto h-full py-10 px-4 border border-gray-400 rounded-xl font-Sora",
+      box1: "w-[400px] lg:w-auto 2xl:w-[500px] 2xl:px-8 h-full py-10 px-4 border border-gray-400 rounded-xl font-Sora",
       title: "font-bold text-xl xl:text-2xl px-5",
       buttonbox: "px-6 w-full",
       button:
         "w-full p-3 h-fit rounded-xl font-semibold text-gray-400 border-2 border-gray-400",
     },
     box2: {
-      box2: "w-full md:w-auto h-full py-10 font-Sora flex flex-col items-center justify-end bg-box2 bg-contain bg-no-repeat bg-bottom",
+      box2: "w-full md:w-auto 2xl:w-[500px] h-full py-10 font-Sora flex flex-col items-center justify-end bg-box2 bg-contain bg-no-repeat bg-bottom",
       handImg: "w-full h-fit",
       bottomComponents: "w-full px-10 h-fit space-y-10 text-white",
       descriptionBox: "space-y-2 w-fit",
@@ -28,7 +28,7 @@ const Offers = () => {
       button: "w-full h-fit p-5 rounded-lg bg-purple-500 font-bold font-Sora",
     },
     box3: {
-      box3: "w-full h-auto space-y-10 py-10 border border-gray-400 rounded-xl font-Sora absolute lg:static lg:block inset-x-0 bottom-0",
+      box3: "w-full h-auto 2xl:w-[500px] space-y-10 py-10 border border-gray-400 rounded-xl font-Sora absolute lg:static lg:block inset-x-0 bottom-0",
       title: "font-bold text-xl xl:text-2xl px-10",
       lists: "w-full h-auto px-10 lg:px-5 xl:px-10 list-none space-y-5",
       list: "w-full h-fit flex items-center gap-3",
@@ -47,8 +47,8 @@ const Offers = () => {
         "w-full p-3 h-fit rounded-xl font-semibold text-gray-400 border-2 border-gray-400",
     },
     cards: {
-      cardContainer: "w-fit lxl:w-auto flex",
-      card: "w-fit lxl:w-96 h-fit",
+      cardContainer: "w-auto lxl:w-auto flex",
+      card: "w-fit h-fit",
       cardHeader: "w-full h-fit",
       headerImg: "w-60 lxl:w-full h-fit object-cover rounded-xl my-5",
       cardBody: "w-full h-fit",

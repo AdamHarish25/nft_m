@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./Content/Components/Navbar";
 import { useViewport } from "./Content/Components/Viewport";
 import Counter from "./Content/Counter";
+import FolderSection from "./Content/FolderSection";
 import Home from "./Content/Home";
 import LiveAuctions from "./Content/LiveAuctions";
 import MobileWarning from "./Content/mobileWarning";
@@ -35,7 +36,7 @@ function App() {
       <MobileWarning/>
   </div>
   ) : (
-  <div className="overflow-x-hidden">
+  <div className="overflow-hidden">
         <Home />
         <LiveAuctions />
         <Overline /> 
@@ -46,6 +47,7 @@ function App() {
         <Spacing />
 
         <Counter />
+        <FolderSection/>
         
         <Navbar />
   </div>);

@@ -35,6 +35,7 @@ module.exports = {
       backgroundImage: {
         homeBackground: "url('./Attachments/Image/Home/Squares.png')",
         box2: "url('./Attachments/Image/bgBox2.png')",
+        folder: "url('./Attachments/Image/FolderSection/background.png')",
       },
     },
   },
