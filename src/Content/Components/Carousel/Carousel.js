@@ -4,7 +4,7 @@ import "./Carousel.css";
 import { useViewport } from "../Viewport";
 
 const Carousel = (props) => {
-  var { children, show } = props;
+  var { children, show, addition } = props;
 
   const viewport = useViewport().windowSize;
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -56,7 +56,7 @@ const Carousel = (props) => {
 
   var carouselCountDisplay;
 
-  if(currentIndex > 0 && Length <= 2){
+  if(currentIndex > 0 && addition === true){
     setCurrentIndex(0)
   }
 

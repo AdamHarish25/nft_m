@@ -10,6 +10,7 @@ import MobileWarning from "./Content/mobileWarning";
 import Offers from "./Content/Offers";
 import Overline from "./Content/Overline";
 import Overline2 from "./Content/Overline2";
+import ScrollableEth from "./Content/ScrollableEth";
 import Showcase from "./Content/Showcase";
 
 const Spacing = () => (
@@ -47,7 +48,8 @@ function App() {
         <Spacing />
 
         <Counter />
-        <FolderSection/>
+        <FolderSection />
+        <ScrollableEth />
         
         <Navbar />
   </div>);

@@ -44,6 +44,18 @@ const Showcase = () => {
     }
   };
 
+  var shown = filtered === "" ? 3 : ShowcaseData.filter(({ tag }) => tag === filtered).length;
+
+  var isFiltered = false
+
+  if (shown === 3)
+  {
+    isFiltered = false
+  } else
+  {
+    isFiltered = true
+  }
+
   if (isBigScreen === false && viewport.innerWidth >= 1860)
   {
     setBigScreen(true);
@@ -113,7 +125,7 @@ const Showcase = () => {
           }) }
         </div>
       ) : (
-          <Carousel show={ 3 }>
+          <Carousel show={ shown } addition={ isFiltered }>
           { (filtered === "" ? ShowcaseData : ShowcaseData.filter(({ tag }) => tag === filtered)).map(({ src, alt, title, timer, bidders, price, people }, index) => {
             return (
               <div key={ index } className={ className.card.container }>

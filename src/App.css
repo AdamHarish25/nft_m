@@ -843,6 +843,10 @@ video {
   width: 0.75rem !important;
 }
 
+.w-40{
+  width: 10rem !important;
+}
+
 .transform{
   -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
           transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
@@ -984,8 +988,16 @@ video {
   overflow: hidden !important;
 }
 
+.overflow-x-auto{
+  overflow-x: auto !important;
+}
+
 .overflow-x-hidden{
   overflow-x: hidden !important;
+}
+
+.overflow-y-hidden{
+  overflow-y: hidden !important;
 }
 
 .rounded-xl{
@@ -1319,6 +1331,10 @@ video {
   font-weight: 200 !important;
 }
 
+.font-light{
+  font-weight: 300 !important;
+}
+
 .tracking-widest{
   letter-spacing: 0.1em !important;
 }
@@ -1378,6 +1394,10 @@ video {
   color: rgb(239 68 68 / var(--tw-text-opacity)) !important;
 }
 
+.text-\[10\]{
+  color: 10 !important;
+}
+
 .placeholder-gray-400::-webkit-input-placeholder{
   --tw-placeholder-opacity: 1 !important;
   color: rgb(156 163 175 / var(--tw-placeholder-opacity)) !important;
@@ -1411,6 +1431,18 @@ video {
 .shadow-none{
   --tw-shadow: 0 0 #0000 !important;
   --tw-shadow-colored: 0 0 #0000 !important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+}
+
+.shadow{
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) !important;
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color) !important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+}
+
+.shadow-md{
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important;
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color) !important;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
 }
 
@@ -1606,6 +1638,11 @@ video {
     font-size: 1.25rem !important;
     line-height: 1.75rem !important;
   }
+
+  .lg\:text-xs{
+    font-size: 0.75rem !important;
+    line-height: 1rem !important;
+  }
 }
 
 @media (min-width: 1280px){
@@ -1631,14 +1668,6 @@ video {
 
   .xl\:gap-20{
     gap: 5rem !important;
-  }
-
-  .xl\:p-10{
-    padding: 2.5rem !important;
-  }
-
-  .xl\:p-14{
-    padding: 3.5rem !important;
   }
 
   .xl\:px-10{
@@ -1716,10 +1745,6 @@ video {
 @media (min-width: 1806px){
   .\32xl\:w-\[500px\]{
     width: 500px !important;
-  }
-
-  .\32xl\:p-20{
-    padding: 5rem !important;
   }
 
   .\32xl\:px-2{
