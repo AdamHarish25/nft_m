@@ -46,15 +46,7 @@ const Showcase = () => {
 
   var shown = filtered === "" ? 3 : ShowcaseData.filter(({ tag }) => tag === filtered).length;
 
-  var isFiltered = false
-
-  if (shown === 3)
-  {
-    isFiltered = false
-  } else
-  {
-    isFiltered = true
-  }
+  var isFiltered = shown === 3 ? false : true
 
   if (isBigScreen === false && viewport.innerWidth >= 1860)
   {
