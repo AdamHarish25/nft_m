@@ -4,6 +4,7 @@ import Navbar from "./Content/Components/Navbar";
 import { useViewport } from "./Content/Components/Viewport";
 import Counter from "./Content/Counter";
 import FolderSection from "./Content/FolderSection";
+import Footer from "./Content/Footer";
 import Home from "./Content/Home";
 import LiveAuctions from "./Content/LiveAuctions";
 import MobileWarning from "./Content/mobileWarning";
@@ -50,7 +51,8 @@ function App() {
         <Counter />
         <FolderSection />
         <ScrollableEth />
-        
+        <Footer />
+  
         <Navbar />
   </div>);
 }
