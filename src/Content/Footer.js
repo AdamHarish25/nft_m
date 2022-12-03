@@ -32,19 +32,19 @@ const SocialsData = [
 
 const Footer = () => {
     const className = {
-        container: "w-screen h-auto xl:h-[30rem] p-10 xl:p-20 grid place-items-center mt-20",
-        footerBox: "w-fit xl:w-[80rem] 2xl:w-auto h-full rounded-xl border-2 border-gray-300 grid grid-cols-1 xl:grid-cols-3 gap-2",
-        box1: "w-full h-full p-10 space-y-10 xl:flex flex-col justify-between",
-        box2: "w-full h-full p-10 border-x-0 border-y-2 xl:border-y-0 xl:border-x-2 border-y-gray-300 xl:border-x-gray-300 space-y-10",
-        box3: "w-full h-full p-10 space-y-10 xl:flex flex-col justify-between items-center",
+        container: "w-screen h-auto lxl:h-[30rem] p-10 lxl:p-20 grid place-items-center mt-20",
+        footerBox: "w-fit lxl:w-[80rem] 2xl:w-auto h-full rounded-xl border-2 border-gray-300 grid grid-cols-1 lxl:grid-cols-3 gap-2",
+        box1: "w-full h-full p-10 space-y-10 lxl:flex flex-col justify-between",
+        box2: "w-full h-full p-10 border-x-0 border-y-2 lxl:border-y-0 lxl:border-x-2 border-y-gray-300 lxl:border-x-gray-300 space-y-10",
+        box3: "w-full h-full p-10 space-y-10 lxl:flex flex-col justify-between items-center",
         hLinks: "inline-flex items-center gap-4 text-gray-400 text-sm font-Inter",
         logos: "w-48 h-auto",
-        paragraph: "font-Inter text-sm font-light w-fit lg:w-[50rem] xl:w-auto",
+        paragraph: "font-Inter text-sm font-light w-fit lg:w-[50rem] lxl:w-auto",
         navigation: "space-y-3 font-Sora font-bold text-sm",
-        button: "w-fit h-fit py-4 px-6 rounded-xl text-white bg-purple-600 font-Sora text-sm font-bold",
+        button: "w-fit h-fit py-4 px-6 rounded-lxl text-white bg-purple-600 font-Sora text-sm font-bold",
         socials: "flex items-center gap-3 text-gray-500",
-        searchbox: "h-auto py-3 px-5 flex items-center justify-between w-80 shadow-xl rounded-xl",
-        form: "text-gray-400 font-Inter outline-none",
+        searchbox: "h-auto py-3 px-5 flex items-center justify-between w-80 shadow-lxl rounded-lxl",
+        form: "placeholder-gray-400 font-Inter outline-none",
         submitbutton: "text-purple-600 font-Sora font-bold text-sm"
     };
 

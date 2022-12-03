@@ -96,7 +96,7 @@ const Home = () => {
               >
                 {dropdownChoice} <FaChevronDown />
               </dropdown>
-              <button>
+              <button type={"submit"}>
                 <FaSearch className="text-[#2A27C9] text-xl" />
               </button>
               <dropdownMenu className={className.dropdownMenu}>

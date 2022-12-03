@@ -38,7 +38,7 @@ function App() {
       <MobileWarning/>
   </div>
   ) : (
-  <div className="overflow-hidden">
+  <div className="overflow-hidden hidescrollbar">
         <Home />
         <LiveAuctions />
         <Overline /> 

@@ -2,10 +2,10 @@ import EthData from "./Data/EthDatas";
 
 const ScrollableEth = () => {
     const className = {
-        container: "w-screen h-auto p-5 flex items-center overflow-x-auto overflow-y-hidden gap-4",
-        box: "w-fit h-auto text-center space-y-2",
+        container: "w-screen h-auto p-5 inline-flex overflow-x-auto whitespace-nowrap gap-4 hidescrollbar",
+        box: "w-auto h-16 lg:h-20 text-center flex flex-col justify-between",
         price: "text-[10px] lg:text-xs 2xl:text-sm font-Sora text-gray-400 font-light",
-        img: "shadow-lg",
+        img: "shadow-lg rounded-xl xl:rounded-2xl",
     }
 
     return (
