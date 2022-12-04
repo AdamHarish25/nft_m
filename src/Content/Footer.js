@@ -41,9 +41,9 @@ const Footer = () => {
         logos: "w-48 h-auto",
         paragraph: "font-Inter text-sm font-light w-fit lg:w-[50rem] lxl:w-auto",
         navigation: "space-y-3 font-Sora font-bold text-sm",
-        button: "w-fit h-fit py-4 px-6 rounded-lxl text-white bg-purple-600 font-Sora text-sm font-bold",
+        button: "w-fit h-fit py-4 px-6 rounded-xl text-white bg-purple-600 font-Sora text-sm font-bold",
         socials: "flex items-center gap-3 text-gray-500",
-        searchbox: "h-auto py-3 px-5 flex items-center justify-between w-80 shadow-lxl rounded-lxl",
+        searchbox: "h-auto py-3 px-5 flex items-center justify-between w-80 shadow-xl rounded-xl",
         form: "placeholder-gray-400 font-Inter outline-none",
         submitbutton: "text-purple-600 font-Sora font-bold text-sm"
     };
