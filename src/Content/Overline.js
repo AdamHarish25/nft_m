@@ -19,28 +19,29 @@ const Overline = () => {
   };
 
   return (
-    <div className={className.container}>
-      <titlebox className={className.titleBox}>
-        <p className={className.sectTitle}>OVERLINE</p>
-        <h1 className={className.title}>
+    <div className={ className.container }>
+      <section className={ className.titleBox }>
+        <p className={ className.sectTitle }>OVERLINE</p>
+        <h1 className={ className.title }>
           Sapien ipsum scelerisque convallis fusce
         </h1>
         <p>
-          Ut amet vulputate faucibus vitae semper eget auctor. Diam
-          tempor pulvinar ultricies dolor feugiat aliquam commodo.
+          Ut amet vulputate faucibus vitae semper eget auctor. Diam tempor
+          pulvinar ultricies dolor feugiat aliquam commodo.
         </p>
-        <buttonbox className={className.buttonBox}>
-          <button className={className.button1}>Get Started</button>
-          <button className={className.button2}>Learn More</button>
-        </buttonbox>
-      </titlebox>
-      <imagebox className={className.imageBox}>
+        <div className={ className.buttonBox }>
+          <button className={ className.button1 }>Get Started</button>
+          <button className={ className.button2 }>Learn More</button>
+        </div>
+      </section>
+
+      <section className={ className.imageBox }>
         <img
-          src={img}
+          src={ img }
           alt="Graphic Vector of a Spilled bucket and a Pie chart"
-          className={className.img}
+          className={ className.img }
         />
-      </imagebox>
+      </section>
     </div>
   );
 };

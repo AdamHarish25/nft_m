@@ -20,8 +20,8 @@ const dropdownData = [
 ];
 
 const Home = () => {
-  const [openDropdown, setOpenDropdown] = useState(false);
-  const [dropdownChoice, setDropdownChoice] = useState("Category");
+  const [ openDropdown, setOpenDropdown ] = useState(false);
+  const [ dropdownChoice, setDropdownChoice ] = useState("Category");
 
   const onClickMenu = (choice) => {
     setOpenDropdown(!openDropdown);
@@ -29,7 +29,8 @@ const Home = () => {
   };
 
   const className = {
-    container: "w-screen h-auto lg:h-screen bg-homeBackground bg-cover p-10 mb-40",
+    container:
+      "w-screen h-auto lg:h-screen bg-homeBackground bg-cover p-10 mb-40",
     wrapper:
       "h-full w-auto flex flex-col justify-center items-center gap-20 pt-[190px] lg:pt-[240px]",
     searchNtitleBox:
@@ -47,80 +48,79 @@ const Home = () => {
     dropdown:
       "w-36 h-8 p-3 border-l border-l-gray-400 text-gray-400 flex items-center text-sm gap-10 cursor-pointer",
     dropBox: "w-fit h-fit p-5 flex items-center gap-5 relative",
-    dropdownMenu: `bg-white space-y-4 w-auto absolute inset-x-0 top-14 p-8 shadow-xl rounded-xl list-none text-start ${
-      openDropdown ? "visible opacity-100" : "invisble opacity-0"
-    } transition-opacity duration-200`,
+    dropdownMenu: `bg-white space-y-4 w-auto absolute inset-x-0 top-14 p-8 shadow-xl rounded-xl list-none text-start ${ openDropdown ? "visible opacity-100" : "invisble opacity-0"
+      } transition-opacity duration-200`,
     menu: "cursor-pointer text-gray-400 font-medium hover:bg-gray-400 hover:text-white p-2 rounded-md transition-color duration-200",
   };
 
   return (
-    <header className={className.container}>
-      <wrapper className={className.wrapper}>
-        <div className={className.searchNtitleBox}>
-          <h6 className={className.smlTitle}>NON FUNGIBLE TOKENS</h6>
-          <h1 className={className.fontTitle}>
-            <section1 className={className.title}>
-              A new NFT{" "}
+    <header className={ className.container }>
+      <div className={ className.wrapper }>
+        <div className={ className.searchNtitleBox }>
+          <h6 className={ className.smlTitle }>NON FUNGIBLE TOKENS</h6>
+          <h1 className={ className.fontTitle }>
+            <div className={ className.title }>
+              A new NFT{ " " }
               <span>
                 <img
-                  src={frame}
+                  src={ frame }
                   alt="right sided vector"
-                  className={className.vector}
+                  className={ className.vector }
                 />
               </span>
-            </section1>
-            <section2 className={className.title}>
+            </div>
+            <div className={ className.title }>
               <span>
                 <img
-                  src={frame2}
+                  src={ frame2 }
                   alt="left sided vector"
-                  className={className.vector2}
+                  className={ className.vector2 }
                 />
               </span>
               Experience
-            </section2>
+            </div>
           </h1>
-          <p className={className.subtitle}>Discover, collect and sell</p>
-          <form className={className.searchBox}>
+          <p className={ className.subtitle }>Discover, collect and sell</p>
+          <form className={ className.searchBox }>
             <input
-              className={className.searchBar}
+              className={ className.searchBar }
               placeholder="Items, collections and creators"
-              type={"text"}
+              type={ "text" }
             />
-            <section className={className.dropBox}>
-              <dropdown
-                onClick={() => {
+            <div className={ className.dropBox }>
+              <div
+                onClick={ () => {
                   setOpenDropdown(!openDropdown);
-                }}
-                className={className.dropdown}
+                } }
+                className={ className.dropdown }
               >
-                {dropdownChoice} <FaChevronDown />
-              </dropdown>
-              <button type={"submit"}>
+                { dropdownChoice } <FaChevronDown />
+              </div>
+              <button type={ "submit" }>
                 <FaSearch className="text-[#2A27C9] text-xl" />
               </button>
-              <dropdownMenu className={className.dropdownMenu}>
-                {dropdownData.map(({ title }, index) => {
+              <div className={ className.dropdownMenu }>
+                { dropdownData.map(({ title }, index) => {
                   return (
                     <li
-                      key={index}
-                      className={className.menu}
-                      onClick={() => onClickMenu(title)}
+                      key={ index }
+                      className={ className.menu }
+                      onClick={ () => onClickMenu(title) }
                     >
-                      {title}
+                      { title }
                     </li>
                   );
-                })}
-              </dropdownMenu>
-            </section>
+                }) }
+              </div>
+            </div>
           </form>
         </div>
-        <brands className={className.brandsBox}>
-          {brandsData.map(({ src, alt }, index) => {
-            return <img src={src} alt={alt} key={index} />;
-          })}
-        </brands>
-      </wrapper>
+        <div className={ className.brandsBox }>
+          { brandsData.map(({ src, alt }, index) => {
+            return <img src={ src } alt={ alt } key={ index } />;
+          }) }
+        </div>
+      </div>
     </header>
   );
 };

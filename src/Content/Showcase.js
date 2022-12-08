@@ -7,7 +7,6 @@ import { useViewport } from "./Components/Viewport";
 import { ShowcaseData } from "./Data/ShowcaseData";
 
 const Showcase = () => {
-
   const [ isBigScreen, setBigScreen ] = useState(false);
   const [ filtered, setFilter ] = useState("");
   const viewport = useViewport().windowSize;
@@ -15,9 +14,11 @@ const Showcase = () => {
   const className = {
     container: "w-screen h-auto p-10 overflow-x-hidden",
     titleHeader: "text-center font-Sora text-3xl font-bold space-y-2",
-    sectionTitle: "text-gray-400 font-Inter text-sm font-normal tracking-widest",
+    sectionTitle:
+      "text-gray-400 font-Inter text-sm font-normal tracking-widest",
     buttonCols: "w-full h-auto flex items-center justify-center py-10 gap-5",
-    navigationButton: "h-auto w-auto px-3 py-1 rounded-md border-[#7780A1] text-[#7780A1] font-Sora transform duration-300",
+    navigationButton:
+      "h-auto w-auto px-3 py-1 rounded-md border-[#7780A1] text-[#7780A1] font-Sora transform duration-300",
     cards: "w-auto h-auto flex items-center justify-center gap-2",
     buttonBox: "w-full p-10 flex justify-center items-center",
     button:
@@ -41,12 +42,15 @@ const Showcase = () => {
       person: "w-6 h-6 xl:w-7 xl:h-7 object-cover rounded-full",
       cardFooter:
         "my-5 w-full h-fit border-t border-t-gray-400 py-5 flex justify-start items-center gap-5",
-    }
+    },
   };
 
-  var shown = filtered === "" ? 3 : ShowcaseData.filter(({ tag }) => tag === filtered).length;
+  var shown =
+    filtered === ""
+      ? 3
+      : ShowcaseData.filter(({ tag }) => tag === filtered).length;
 
-  var isFiltered = shown === 3 ? false : true
+  var isFiltered = shown === 3 ? false : true;
 
   if (isBigScreen === false && viewport.innerWidth >= 1860)
   {
@@ -59,34 +63,75 @@ const Showcase = () => {
   return (
     <div className={ className.container }>
       <h1 className={ className.titleHeader }>
-        <p className={ className.sectionTitle }>
-          OVERLINE
-        </p>
+        <p className={ className.sectionTitle }>OVERLINE</p>
         <p>Most popular live auctions</p>
       </h1>
       <div className={ className.buttonCols }>
-        <button onClick={ () => (filtered === "Architecture" ? setFilter("") : setFilter("Architecture")) } className={ ` ${ className.navigationButton } ${ filtered === "Architecture" ? "font-bold border-2" : "font-normal border"}`}>Architecture</button>
-        <button onClick={ () => (filtered === "Photography" ? setFilter("") : setFilter("Photography")) } className={ `${ className.navigationButton } ${ filtered === "Photography" ? "font-bold border-2" : "font-normal border" }` }>Photography</button>
-        <button onClick={ () => (filtered === "Games" ? setFilter("") : setFilter("Games")) } className={ `${ className.navigationButton } ${ filtered === "Games" ? "font-bold border-2" : "font-normal border" }` }>Games</button>
-        <button onClick={ () => (filtered === "Music" ? setFilter("") : setFilter("Music")) } className={ `${ className.navigationButton } ${ filtered === "Music" ? "font-bold border-2" : "font-normal border" }` }>Music</button>
+        <button
+          onClick={ () =>
+            filtered === "Architecture"
+              ? setFilter("")
+              : setFilter("Architecture")
+          }
+          className={ ` ${ className.navigationButton } ${ filtered === "Architecture"
+              ? "font-bold border-2"
+              : "font-normal border"
+            }` }
+        >
+          Architecture
+        </button>
+        <button
+          onClick={ () =>
+            filtered === "Photography"
+              ? setFilter("")
+              : setFilter("Photography")
+          }
+          className={ `${ className.navigationButton } ${ filtered === "Photography"
+              ? "font-bold border-2"
+              : "font-normal border"
+            }` }
+        >
+          Photography
+        </button>
+        <button
+          onClick={ () =>
+            filtered === "Games" ? setFilter("") : setFilter("Games")
+          }
+          className={ `${ className.navigationButton } ${ filtered === "Games" ? "font-bold border-2" : "font-normal border"
+            }` }
+        >
+          Games
+        </button>
+        <button
+          onClick={ () =>
+            filtered === "Music" ? setFilter("") : setFilter("Music")
+          }
+          className={ `${ className.navigationButton } ${ filtered === "Music" ? "font-bold border-2" : "font-normal border"
+            }` }
+        >
+          Music
+        </button>
       </div>
 
       { isBigScreen ? (
         <div className={ className.cards }>
-          { (filtered === "" ? ShowcaseData : ShowcaseData.filter(({ tag }) => tag === filtered)).map(({ src, alt, title, timer, bidders, price, people }, index) => {
+          { (filtered === ""
+            ? ShowcaseData
+            : ShowcaseData.filter(({ tag }) => tag === filtered)
+          ).map(({ src, alt, title, timer, bidders, price, people }, index) => {
             return (
-              <card key={ index } className={ className.card.card }>
-                <cardheader className={ className.card.cardHeader }>
+              <div key={ index } className={ className.card.card }>
+                <div className={ className.card.cardHeader }>
                   <img
                     draggable={ false }
                     src={ src }
                     alt={ alt }
                     className={ className.card.headerImg }
                   />
-                </cardheader>
-                <cardbody className={ className.card.cardBody }>
+                </div>
+                <div className={ className.card.cardBody }>
                   <h1 className={ className.card.cardTitle }>{ title }</h1>
-                  <headerbox className={ className.card.headerBox }>
+                  <div className={ className.card.headerBox }>
                     <h1 className={ className.card.countDownBox }>
                       <RiTimerFill className="w-5 h-5" />
                       <span className={ className.card.timer }>
@@ -94,45 +139,53 @@ const Showcase = () => {
                         min left
                       </span>
                     </h1>
-                    <price className={ className.card.price }>
-                      { price }
-                    </price>
-                  </headerbox>
-                </cardbody>
-                <cardfooter className={ className.card.cardFooter }>
-                  <people className={ className.card.people }>
+                    <p className={ className.card.price }>{ price }</p>
+                  </div>
+                </div>
+                <div className={ className.card.cardFooter }>
+                  <div className={ className.card.people }>
                     { people.map(({ src, alt }, index) => {
-                      return <img key={ index } src={ src } alt={ alt } className={ className.card.person } />;
+                      return (
+                        <img
+                          key={ index }
+                          src={ src }
+                          alt={ alt }
+                          className={ className.card.person }
+                        />
+                      );
                     }) }
-                  </people>
+                  </div>
                   <div className={ className.card.sections }>
                     <h1>{ bidders } people are bidding</h1>
                     <div className={ className.card.like }>
                       <AiFillHeart />
                     </div>
                   </div>
-                </cardfooter>
-              </card>
+                </div>
+              </div>
             );
           }) }
         </div>
       ) : (
-          <Carousel show={ shown } addition={ isFiltered }>
-          { (filtered === "" ? ShowcaseData : ShowcaseData.filter(({ tag }) => tag === filtered)).map(({ src, alt, title, timer, bidders, price, people }, index) => {
+        <Carousel show={ shown } addition={ isFiltered }>
+          { (filtered === ""
+            ? ShowcaseData
+            : ShowcaseData.filter(({ tag }) => tag === filtered)
+          ).map(({ src, alt, title, timer, bidders, price, people }, index) => {
             return (
               <div key={ index } className={ className.card.container }>
-                <card className={ className.card.card }>
-                  <cardheader className={ className.card.cardHeader }>
+                <div className={ className.card.card }>
+                  <div className={ className.card.cardHeader }>
                     <img
                       draggable={ false }
                       src={ src }
                       alt={ alt }
                       className={ className.card.headerImg }
                     />
-                  </cardheader>
-                  <cardbody className={ className.card.cardBody }>
+                  </div>
+                  <div className={ className.card.cardBody }>
                     <h1 className={ className.card.cardTitle }>{ title }</h1>
-                    <headerbox className={ className.card.headerBox }>
+                    <div className={ className.card.headerBox }>
                       <h1 className={ className.card.countDownBox }>
                         <RiTimerFill className="w-5 h-5" />
                         <span className={ className.card.timer }>
@@ -140,25 +193,32 @@ const Showcase = () => {
                           min left
                         </span>
                       </h1>
-                      <price className={ className.card.price }>
-                        { price }
-                      </price>
-                    </headerbox>
-                  </cardbody>
-                  <cardfooter className={ className.card.cardFooter }>
-                    <people className={ className.card.people }>
+                      <p className={ className.card.price }>{ price }</p>
+                    </div>
+                  </div>
+
+                  <div className={ className.card.cardFooter }>
+                    <div className={ className.card.people }>
                       { people.map(({ src, alt }, index) => {
-                        return <img key={ index } src={ src } alt={ alt } className={ className.card.person } />;
+                        return (
+                          <img
+                            key={ index }
+                            src={ src }
+                            alt={ alt }
+                            className={ className.card.person }
+                          />
+                        );
                       }) }
-                    </people>
+                    </div>
                     <div className={ className.card.sections }>
                       <h1>{ bidders } people are bidding</h1>
                       <button className={ className.card.like }>
                         <AiFillHeart />
                       </button>
                     </div>
-                  </cardfooter>
-                </card>
+                  </div>
+
+                </div>
               </div>
             );
           }) }
@@ -166,11 +226,8 @@ const Showcase = () => {
       ) }
 
       <div className={ className.buttonBox }>
-        <button className={ className.button }>
-          Show me more
-        </button>
+        <button className={ className.button }>Show me more</button>
       </div>
-
     </div>
   );
 };

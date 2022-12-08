@@ -50,8 +50,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={className.container}>
-      <desktopNav className={className.desktopNav}>
+    <nav className={ className.container }>
+      
+      <section className={className.desktopNav}>
         <section className={className.logoBox}>
           <a href="#">
             <img src={logo} alt="logo" className={className.logo} />
@@ -75,10 +76,10 @@ const Navbar = () => {
           <button className={className.buttons.button1}>Contact</button>
           <button className={className.buttons.button2}>My Account</button>
         </section>
-      </desktopNav>
+      </section>
 
-      <mobileNav className={className.mobileNav}>
-        <navigation className={className.navigation}>
+      <section className={className.mobileNav}>
+        <div className={className.navigation}>
           <section className={className.logoBox}>
             <a href="#">
               <img src={logo} alt="logo" className={className.logo} />
@@ -90,8 +91,8 @@ const Navbar = () => {
           >
             <BiMenuAltRight />
           </button>
-        </navigation>
-        <menuBox className={className.menuBox}>
+        </div>
+        <div className={className.menuBox}>
           <ul className={className.navBox}>
             <li>
               <a onClick={() => setOpenMenu(!openMenu)} href="#">
@@ -118,8 +119,9 @@ const Navbar = () => {
             <button className={className.buttons.button1}>Contact</button>
             <button className={className.buttons.button2}>My Account</button>
           </section>
-        </menuBox>
-      </mobileNav>
+        </div>
+      </section>
+
     </nav>
   );
 };

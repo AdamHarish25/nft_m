@@ -5,7 +5,7 @@ import logo from '../Attachments/Image/Logo.png';
 const SocialsData = [
     {
         link: "https://Facebook.com",
-        icon: <FaFacebook/>,
+        icon: <FaFacebook />,
     },
     {
         link: "https://Instagram.com",
@@ -27,7 +27,7 @@ const SocialsData = [
         link: "https://Whatsapp.com",
         icon: <FaWhatsapp />,
     },
-]
+];
 
 
 const Footer = () => {
@@ -81,30 +81,30 @@ const Footer = () => {
                         </li>
                     </ul>
 
-                    <button className={className.button}>
+                    <button className={ className.button }>
                         My Account
                     </button>
 
-                    <ul className={className.socials}>
+                    <ul className={ className.socials }>
                         {
-                            SocialsData.map((data) => {
+                            SocialsData.map((data, index) => {
                                 return (
-                                <li>
-                                    <a href={data.link}>
-                                        {data.icon}
-                                    </a>
-                                </li>)
+                                    <li key={ index }>
+                                        <a href={ data.link }>
+                                            { data.icon }
+                                        </a>
+                                    </li>);
                             })
                         }
                     </ul>
                 </div>
                 <div className={ className.box1 }>
-                    <p className={className.paragraph}>
-                        Nibh volutpat, aliquam id sagittis elementum. Pellentesque laoreet velit, sed egestas in. Id nam semper dolor tellus vulputate eget turpis. 
+                    <p className={ className.paragraph }>
+                        Nibh volutpat, aliquam id sagittis elementum. Pellentesque laoreet velit, sed egestas in. Id nam semper dolor tellus vulputate eget turpis.
                     </p>
                     <form className={ className.searchbox }>
                         <input type={ "text" } placeholder="Newsletter" className={ className.form } />
-                        <button className={className.submitbutton} type={"submit"}>
+                        <button className={ className.submitbutton } type={ "submit" }>
                             Sign In
                         </button>
                     </form>

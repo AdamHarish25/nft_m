@@ -30,48 +30,48 @@ const LiveAuctions = () => {
   };
 
   return (
-    <div className={className.container}>
-      <h1 className={className.title}>Latest live auctions</h1>
-      <Carousel show={3}>
-        {Carousel1.map(
+    <div className={ className.container }>
+      <h1 className={ className.title }>Latest live auctions</h1>
+      <Carousel show={ 3 }>
+        { Carousel1.map(
           (
             { src, alt, title, price, people, bidders, likers, timer },
             index
           ) => {
             return (
-              <div key={index} className={className.cardContainer}>
+              <div key={ index } className={ className.cardContainer }>
                 <card>
-                  <cardheader className={className.cardHeader}>
-                    <img src={src} alt={alt} className={className.headerImg} />
+                  <cardheader className={ className.cardHeader }>
+                    <img src={ src } alt={ alt } className={ className.headerImg } />
                   </cardheader>
-                  <cardbody className={className.cardBody}>
-                    <headerbox className={className.headerBox}>
-                      <h1 className={className.cardTitle}>{title}</h1>
-                      <price className={className.price}>{price}</price>
+                  <cardbody className={ className.cardBody }>
+                    <headerbox className={ className.headerBox }>
+                      <h1 className={ className.cardTitle }>{ title }</h1>
+                      <price className={ className.price }>{ price }</price>
                     </headerbox>
-                    <h1 className={className.countDown}>
-                      <RiTimerFill className="w-6 h-6" />{" "}
-                      <CountdownTimer targetDate={timer} /> min left
+                    <h1 className={ className.countDown }>
+                      <RiTimerFill className="w-6 h-6" />{ " " }
+                      <CountdownTimer targetDate={ timer } /> min left
                     </h1>
                   </cardbody>
-                  <cardfooter className={className.cardFooter}>
-                    <people className={className.people}>
-                      {people.map(({ src, alt }, index) => {
+                  <cardfooter className={ className.cardFooter }>
+                    <people className={ className.people }>
+                      { people.map(({ src, alt }, index) => {
                         return (
                           <img
-                            key={index}
-                            src={src}
-                            alt={alt}
-                            className={className.person}
+                            key={ index }
+                            src={ src }
+                            alt={ alt }
+                            className={ className.person }
                           />
                         );
-                      })}
+                      }) }
                     </people>
-                    <sections className={className.sections}>
-                      <h1>{bidders} people are bidding</h1>
-                      <div className={className.like}>
+                    <sections className={ className.sections }>
+                      <h1>{ bidders } people are bidding</h1>
+                      <div className={ className.like }>
                         <AiFillHeart />
-                        {likers}
+                        { likers }
                       </div>
                     </sections>
                   </cardfooter>
@@ -79,7 +79,7 @@ const LiveAuctions = () => {
               </div>
             );
           }
-        )}
+        ) }
       </Carousel>
     </div>
   );

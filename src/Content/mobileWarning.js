@@ -8,21 +8,21 @@ const MobileWarning = () => {
         title: "font-Sora font-medium text-xl sm:text-2xl w-[450px]",
         titleHeader: "font-normal text-base font-Inter text-gray-500",
         img: "w-auto h-[450px]"
-    }
-    
+    };
+
     return (
-        <div className={className.container}>
-            <div className={className.innerBox}>
-                <img src={img1} alt="A confused bean reading an instruction vector" className={className.img}/>
-                <h1 className={className.title}>
-                    <p className={className.titleHeader}>
+        <div className={ className.container }>
+            <div className={ className.innerBox }>
+                <img src={ img1 } alt="A confused bean reading an instruction vector" className={ className.img } />
+                <h1 className={ className.title }>
+                    <p className={ className.titleHeader }>
                         We are truly sorry that
                     </p>
                     Your device seems to not support Our website
                 </h1>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default MobileWarning;

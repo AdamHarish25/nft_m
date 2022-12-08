@@ -6,24 +6,24 @@ const ScrollableEth = () => {
         box: "w-auto h-16 lg:h-20 text-center flex flex-col justify-between",
         price: "text-[10px] lg:text-xs 2xl:text-sm font-Sora text-gray-400 font-light",
         img: "shadow-lg rounded-xl xl:rounded-2xl",
-    }
+    };
 
     return (
-        <div className={className.container}>
+        <div className={ className.container }>
             {
-                EthData.map(({ src, alt, price }) => {
+                EthData.map(({ src, alt, price }, index) => {
                     return (
-                        <div className={className.box}>
-                            <img className={className.img} src={ src } alt={ alt } />
-                            <p className={className.price}>
+                        <div key={ index } className={ className.box }>
+                            <img className={ className.img } src={ src } alt={ alt } />
+                            <p className={ className.price }>
                                 { price } ETH
                             </p>
                         </div>
-                    )
+                    );
                 })
             }
         </div>
-    )
+    );
 };
 
 export default ScrollableEth;

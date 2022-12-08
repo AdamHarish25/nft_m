@@ -3,7 +3,7 @@ import "./App.css";
 import Navbar from "./Content/Components/Navbar";
 import { useViewport } from "./Content/Components/Viewport";
 import Counter from "./Content/Counter";
-import FolderSection from "./Content/FolderSection";
+import TopCreators from "./Content/TopCreators";
 import Footer from "./Content/Footer";
 import Home from "./Content/Home";
 import LiveAuctions from "./Content/LiveAuctions";
@@ -49,7 +49,7 @@ function App() {
         <Spacing />
 
         <Counter />
-        <FolderSection />
+        <TopCreators />
         <ScrollableEth />
         <Footer />
   

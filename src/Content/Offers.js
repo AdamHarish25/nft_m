@@ -65,127 +65,127 @@ const Offers = () => {
   };
 
   return (
-    <container className={className.container}>
-      <div className={className.boxes}>
-        <box1 className={className.box1.box1}>
-          <h1 className={className.box1.title}>
+    <div className={ className.container }>
+      <div className={ className.boxes }>
+        <section className={ className.box1.box1 }>
+          <h1 className={ className.box1.title }>
             Check out the hottest
             <br /> Sale offers
           </h1>
 
-          <Carousel show={1.5}>
-            {Carousel2.map(
+          <Carousel show={ 1.5 }>
+            { Carousel2.map(
               ({ src, alt, title, price, bidders, timer }, index) => {
                 return (
-                  <div key={index} className={className.cards.cardContainer}>
-                    <card className={className.cards.card}>
-                      <cardheader className={className.cards.cardHeader}>
+                  <div key={ index } className={ className.cards.cardContainer }>
+                    <div className={ className.cards.card }>
+                      <div className={ className.cards.cardHeader }>
                         <img
-                          src={src}
-                          alt={alt}
-                          className={className.cards.headerImg}
+                          src={ src }
+                          alt={ alt }
+                          className={ className.cards.headerImg }
                         />
-                      </cardheader>
-                      <cardbody className={className.cards.cardBody}>
-                        <h1 className={className.cards.cardTitle}>{title}</h1>
-                        <headerbox className={className.cards.headerBox}>
-                          <h1 className={className.cards.countDownBox}>
+                      </div>
+                      <div className={ className.cards.cardBody }>
+                        <h1 className={ className.cards.cardTitle }>{ title }</h1>
+                        <div className={ className.cards.headerBox }>
+                          <h1 className={ className.cards.countDownBox }>
                             <RiTimerFill className="w-5 h-5" />
-                            <span className={className.cards.timer}>
-                              <CountdownTimer targetDate={timer} />
+                            <span className={ className.cards.timer }>
+                              <CountdownTimer targetDate={ timer } />
                               min left
                             </span>
                           </h1>
-                          <price className={className.cards.price}>
-                            {price}
-                          </price>
-                        </headerbox>
-                      </cardbody>
-                      <cardfooter className={className.cards.cardFooter}>
-                        <h1>{bidders} people are bidding</h1>
-                        <div className={className.cards.like}>
+                          <p className={ className.cards.price }>
+                            { price }
+                          </p>
+                        </div>
+                      </div>
+                      <div className={ className.cards.cardFooter }>
+                        <h1>{ bidders } people are bidding</h1>
+                        <div className={ className.cards.like }>
                           <AiFillHeart />
                         </div>
-                      </cardfooter>
-                    </card>
+                      </div>
+                    </div>
                   </div>
                 );
               }
-            )}
+            ) }
           </Carousel>
 
-          <div className={className.box1.buttonbox}>
-            <button className={className.box1.button}>Show me more</button>
+          <div className={ className.box1.buttonbox }>
+            <button className={ className.box1.button }>Show me more</button>
           </div>
-        </box1>
+        </section>
 
-        <box2 className={className.box2.box2}>
+        <section className={ className.box2.box2 }>
           <img
-            src={hand}
+            src={ hand }
             alt="A colorful hand with a melted texture"
-            className={className.box2.handImg}
+            className={ className.box2.handImg }
           />
 
-          <div className={className.box2.bottomComponents}>
-            <div className={className.box2.descriptionBox}>
-              <h1 className={className.box2.title}>
+          <div className={ className.box2.bottomComponents }>
+            <div className={ className.box2.descriptionBox }>
+              <h1 className={ className.box2.title }>
                 Get started creating & selling your NFTs
               </h1>
-              <p className={className.box2.description}>
+              <p className={ className.box2.description }>
                 Nunc gravida faucibus netus feugiat tellus, viverra massa
                 feugiat. Mi est sit.
               </p>
             </div>
 
-            <button className={className.box2.button}>Get started</button>
+            <button className={ className.box2.button }>Get started</button>
           </div>
-        </box2>
+        </section>
 
-         <stabilizer className="w-full h-[50rem] lg:hidden">
-          <br/>
-         </stabilizer>     
+        <div className="w-full h-[50rem] lg:hidden">
+          <br />
+        </div>
 
-        <box3 className={className.box3.box3}>
-          <h1 className={className.box3.title}>
+        <section className={ className.box3.box3 }>
+          <h1 className={ className.box3.title }>
             Top NFT at a lower <br /> price
           </h1>
 
-          <ul className={className.box3.lists}>
-            {ListofNft.map(
+          <ul className={ className.box3.lists }>
+            { ListofNft.map(
               ({ src, alt, title, timer, price, bidders, icon }, index) => {
                 return (
-                  <li key={index} className={className.box3.list}>
-                    <img src={src} alt={alt} className={className.box3.img} />
-                    <div className={className.box3.descriptionBox}>
-                      <h1 className={className.box3.listTitle}>{title}</h1>
-                      <div className={className.box3.box}>
-                        <h1 className={className.box3.countDownBox}>
+                  <li key={ index } className={ className.box3.list }>
+                    <img src={ src } alt={ alt } className={ className.box3.img } />
+                    <div className={ className.box3.descriptionBox }>
+                      <h1 className={ className.box3.listTitle }>{ title }</h1>
+                      <div className={ className.box3.box }>
+                        <h1 className={ className.box3.countDownBox }>
                           <RiTimerFill className="w-3 h-3 lxl:w-4 lxl:h-4" />
-                          <span className={className.box3.timer}>
-                            <CountdownTimer targetDate={timer} />
+                          <span className={ className.box3.timer }>
+                            <CountdownTimer targetDate={ timer } />
                             min left
                           </span>
                         </h1>
-                        <price className={className.box3.price}>{price}</price>
+                        <price className={ className.box3.price }>{ price }</price>
                       </div>
-                      <div className={className.box3.box}>
-                        <h1 className={className.box3.bidders}>
-                          {bidders} people are bidding
+                      <div className={ className.box3.box }>
+                        <h1 className={ className.box3.bidders }>
+                          { bidders } people are bidding
                         </h1>
-                        <button className={className.box3.like}>{icon}</button>
+                        <button className={ className.box3.like }>{ icon }</button>
                       </div>
                     </div>
                   </li>
                 );
               }
-            )}
+            ) }
           </ul>
-          <div className={className.box3.buttonbox}>
-            <button className={className.box3.button}>Show me more</button>
+          <div className={ className.box3.buttonbox }>
+            <button className={ className.box3.button }>Show me more</button>
           </div>
-        </box3>
+        </section>
       </div>
-    </container>
+    </div>
   );
 };
 

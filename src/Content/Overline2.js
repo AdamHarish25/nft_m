@@ -36,9 +36,10 @@ const Overline2 = () => {
 
     return (
         <div className={className.container}>
-            <imagebox className={className.imagebox}>
+            <div className={className.imagebox}>
                 <img src={overline2} alt="Graphic Vector of a Suspected emote and an Aeroplane in the cloud" className={className.img}/>
-            </imagebox>
+            </div>
+            
             <div className={className.descriptionBox}>
                 <h1 className={className.titleBox}>
                     <p className={className.sectiontitle}>OVERLINE</p> 

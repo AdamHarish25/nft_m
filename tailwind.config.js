@@ -7,7 +7,9 @@ module.exports = {
       Poppins: ["'Poppins'", "sans-serif"],
       Roboto: ["'Roboto'", "sans-serif"],
       Sora: ["'Sora'", "sans-serif"],
-      Inter: ["'Inter'", "sans-serif"],
+      Inter: [ "'Inter'", "sans-serif" ],
+      Oxanium: [ "'Oxanium'", "cursive" ],
+      WorkSans: [ "'Work Sans'", "sans-serif" ],
     },
     screens: {
       xs: "0px",
