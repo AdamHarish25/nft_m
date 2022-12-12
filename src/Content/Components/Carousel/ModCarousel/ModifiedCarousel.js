@@ -72,13 +72,9 @@ const ModCarousel = (props) => {
         {
             show = 1;
             carouselCountDisplay = `shows-${ show }`;
-        } else if (viewport.innerWidth >= 1600 && viewport.innerWidth < 1800)
+        } else if (viewport.innerWidth >= 1600)
         {
             show = 4;
-            carouselCountDisplay = `shows-${ show }`;
-        } else if (viewport.innerWidth >= 1800)
-        {
-            show = 5;
             carouselCountDisplay = `shows-${ show }`;
         } else
         {
