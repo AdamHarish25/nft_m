@@ -1,6 +1,6 @@
 import { AiFillHeart } from "react-icons/ai";
 import { RiTimerFill } from "react-icons/ri";
-import Carousel from "./Components/Carousel/Carousel";
+import Carousel from "./Components/Carousel/OriginCarousel/Carousel";
 import CountdownTimer from "./Components/Timer/Timer";
 import { Carousel2 } from "./Data/CarouselData";
 import hand from "../Attachments/Image/meltedHand.png";
@@ -166,7 +166,7 @@ const Offers = () => {
                             min left
                           </span>
                         </h1>
-                        <price className={ className.box3.price }>{ price }</price>
+                        <p className={ className.box3.price }>{ price }</p>
                       </div>
                       <div className={ className.box3.box }>
                         <h1 className={ className.box3.bidders }>

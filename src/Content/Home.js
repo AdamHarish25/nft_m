@@ -48,7 +48,7 @@ const Home = () => {
     dropdown:
       "w-36 h-8 p-3 border-l border-l-gray-400 text-gray-400 flex items-center text-sm gap-10 cursor-pointer",
     dropBox: "w-fit h-fit p-5 flex items-center gap-5 relative",
-    dropdownMenu: `bg-white space-y-4 w-auto absolute inset-x-0 top-14 p-8 shadow-xl rounded-xl list-none text-start ${ openDropdown ? "visible opacity-100" : "invisble opacity-0"
+    dropdownMenu: `bg-white space-y-4 w-auto absolute inset-x-0 top-14 p-8 shadow-xl rounded-xl list-none text-start ${ openDropdown ? "visible opacity-100" : "invisible opacity-0"
       } transition-opacity duration-200`,
     menu: "cursor-pointer text-gray-400 font-medium hover:bg-gray-400 hover:text-white p-2 rounded-md transition-color duration-200",
   };

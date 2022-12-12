@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AiFillHeart } from "react-icons/ai";
 import { RiTimerFill } from "react-icons/ri";
-import Carousel from "./Components/Carousel/Carousel";
+import Carousel from "./Components/Carousel/OriginCarousel/Carousel";
 import CountdownTimer from "./Components/Timer/Timer";
 import { useViewport } from "./Components/Viewport";
 import { ShowcaseData } from "./Data/ShowcaseData";

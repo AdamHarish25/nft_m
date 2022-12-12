@@ -1,0 +1,91 @@
+.carousel-container2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.carousel-wrapper2 {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.carousel-content-wrapper2 {
+    padding: 5rem 0rem;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-content2::-webkit-scrollbar,
+.carousel-content2::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-content2 {
+    display: flex;
+    transition: all 250ms linear;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.carousel-content2 > * {
+    width: 100%;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+.carousel-content2.shows-1 > * {
+    width: 100%;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+.carousel-content2.shows-2 > * {
+    width: 50%;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.carousel-content2.shows-3 > * {
+    width: calc(100% / 3);
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.carousel-content2.shows-4 > * {
+    width: calc(100% / 4);
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.carousel-content2.shows-5 > * {
+    width: calc(100% / 5);
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.right-arrow2,
+.left-arrow2 {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 100%;
+    background-color: rgb(0, 174, 255) !important;
+    opacity: 0.2;
+    cursor: default;
+    color: white;
+}
+
+.button-box{
+    position: absolute;
+    right: 2.5rem;
+    top: 0;
+    width: auto;
+    height: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}

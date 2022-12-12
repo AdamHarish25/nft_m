@@ -27,6 +27,9 @@ module.exports = {
       "2xl": "1806px",
     },
     extend: {
+      width: {
+        '128': '450px',
+      },
       gridTemplateColumns: {
         SL: "auto 1fr",
         "2auto": "repeat(2, minmax(auto, auto))",
